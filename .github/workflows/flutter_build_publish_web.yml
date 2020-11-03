@@ -9,12 +9,12 @@ jobs:
     env:
       my_secret: ${{secrets.commit_secret}}
     runs-on: ubuntu-latest
+    custom-domain: 'https://www.necter.io/'
     steps:
       - uses: actions/checkout@v1
       - uses: subosito/flutter-action@v1
         with:
           channel: 'dev'
-          custom-domain: 'https://www.necter.io/'
       - run: flutter config --enable-web
       - run: flutter pub get
       - run: flutter build web --release
