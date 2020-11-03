@@ -8,8 +8,8 @@ jobs:
     name: Build Web
     env:
       my_secret: ${{secrets.commit_secret}}
+      custom_domain: 'https://www.necter.io/'
     runs-on: ubuntu-latest
-    custom-domain: 'https://www.necter.io/'
     steps:
       - uses: actions/checkout@v1
       - uses: subosito/flutter-action@v1
