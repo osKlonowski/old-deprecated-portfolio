@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:necter_web/views/about/about_content_desktop.dart';
+import 'package:necter_web/views/about/about_content_mobile.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 class AboutView extends StatelessWidget {
   const AboutView({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text('About View'),
+    return ScreenTypeLayout(
+      mobile: AboutContentMobile(),
+      desktop: AboutContentDesktop(),
     );
   }
 }
