@@ -2,6 +2,18 @@
   "configVersion": 2,
   "packages": [
     {
+      "name": "archive",
+      "rootUri": "file:///Users/oskarklonowski/flutter/.pub-cache/hosted/pub.dartlang.org/archive-2.0.13",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
+      "name": "args",
+      "rootUri": "file:///Users/oskarklonowski/flutter/.pub-cache/hosted/pub.dartlang.org/args-1.6.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.3"
+    },
+    {
       "name": "async",
       "rootUri": "file:///Users/oskarklonowski/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.5.0-nullsafety.1",
       "packageUri": "lib/",
@@ -38,10 +50,28 @@
       "languageVersion": "2.10"
     },
     {
+      "name": "convert",
+      "rootUri": "file:///Users/oskarklonowski/flutter/.pub-cache/hosted/pub.dartlang.org/convert-2.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "1.17"
+    },
+    {
+      "name": "crypto",
+      "rootUri": "file:///Users/oskarklonowski/flutter/.pub-cache/hosted/pub.dartlang.org/crypto-2.1.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.3"
+    },
+    {
       "name": "cupertino_icons",
       "rootUri": "file:///Users/oskarklonowski/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.0"
+    },
+    {
+      "name": "extension",
+      "rootUri": "file:///Users/oskarklonowski/flutter/.pub-cache/hosted/pub.dartlang.org/extension-0.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.6"
     },
     {
       "name": "fake_async",
@@ -62,10 +92,28 @@
       "languageVersion": "2.10"
     },
     {
+      "name": "flutter_web_plugins",
+      "rootUri": "file:///Users/oskarklonowski/flutter/packages/flutter_web_plugins",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
       "name": "get_it",
       "rootUri": "file:///Users/oskarklonowski/flutter/.pub-cache/hosted/pub.dartlang.org/get_it-5.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.1"
+    },
+    {
+      "name": "image",
+      "rootUri": "file:///Users/oskarklonowski/flutter/.pub-cache/hosted/pub.dartlang.org/image-2.1.18",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
+      "name": "js",
+      "rootUri": "file:///Users/oskarklonowski/flutter/.pub-cache/hosted/pub.dartlang.org/js-0.6.3-nullsafety.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.10"
     },
     {
       "name": "matcher",
@@ -80,10 +128,22 @@
       "languageVersion": "2.10"
     },
     {
+      "name": "native_pdf_renderer",
+      "rootUri": "file:///Users/oskarklonowski/flutter/.pub-cache/hosted/pub.dartlang.org/native_pdf_renderer-2.3.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.7"
+    },
+    {
       "name": "path",
       "rootUri": "file:///Users/oskarklonowski/flutter/.pub-cache/hosted/pub.dartlang.org/path-1.8.0-nullsafety.1",
       "packageUri": "lib/",
       "languageVersion": "2.10"
+    },
+    {
+      "name": "petitparser",
+      "rootUri": "file:///Users/oskarklonowski/flutter/.pub-cache/hosted/pub.dartlang.org/petitparser-3.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.7"
     },
     {
       "name": "responsive_builder",
@@ -122,6 +182,12 @@
       "languageVersion": "2.10"
     },
     {
+      "name": "synchronized",
+      "rootUri": "file:///Users/oskarklonowski/flutter/.pub-cache/hosted/pub.dartlang.org/synchronized-2.2.0+2",
+      "packageUri": "lib/",
+      "languageVersion": "2.8"
+    },
+    {
       "name": "term_glyph",
       "rootUri": "file:///Users/oskarklonowski/flutter/.pub-cache/hosted/pub.dartlang.org/term_glyph-1.2.0-nullsafety.1",
       "packageUri": "lib/",
@@ -140,10 +206,22 @@
       "languageVersion": "2.10"
     },
     {
+      "name": "uuid",
+      "rootUri": "file:///Users/oskarklonowski/flutter/.pub-cache/hosted/pub.dartlang.org/uuid-2.2.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.2"
+    },
+    {
       "name": "vector_math",
       "rootUri": "file:///Users/oskarklonowski/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.1.0-nullsafety.3",
       "packageUri": "lib/",
       "languageVersion": "2.10"
+    },
+    {
+      "name": "xml",
+      "rootUri": "file:///Users/oskarklonowski/flutter/.pub-cache/hosted/pub.dartlang.org/xml-4.5.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.7"
     },
     {
       "name": "necter_web",
@@ -152,7 +230,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2020-11-03T18:03:37.930717Z",
+  "generated": "2020-11-04T21:25:41.171238Z",
   "generator": "pub",
   "generatorVersion": "2.11.0-213.1.beta"
 }

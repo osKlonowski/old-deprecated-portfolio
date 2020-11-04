@@ -26,6 +26,7 @@ dependencies:
 
   cupertino_icons: ^1.0.0
   responsive_builder: ^0.1.2
+  native_pdf_renderer: ^2.3.2
   get_it:
 
 dev_dependencies:

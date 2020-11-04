@@ -11,7 +11,14 @@ class AboutContentDesktop extends StatelessWidget {
         AboutDetails(),
         Expanded(
           child: Center(
-            child: Image.network('https://sobernation.com/wp-content/uploads/2020/06/Untitled-design-2.png'),
+            child: Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: NetworkImage('https://sobernation.com/wp-content/uploads/2020/06/Untitled-design-2.png'),
+                ),
+                borderRadius: BorderRadius.circular(15.0),
+              ),
+            ),
           ),
         )
       ],
