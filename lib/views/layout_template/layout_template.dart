@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:necter_web/locator.dart';
 import 'package:necter_web/routing/route_names.dart';
+import 'package:necter_web/routing/router.dart';
 import 'package:necter_web/services/navigation_service.dart';
-import 'package:necter_web/views/legal/legal_document_view.dart';
 import 'package:necter_web/widgets/centered_view/centered_view.dart';
 import 'package:necter_web/widgets/nav_drawer/navigation_drawer.dart';
 import 'package:necter_web/widgets/navigation_bar/navigation_bar.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class LayoutTemplate extends StatelessWidget {
-  final Widget child;
-  const LayoutTemplate({Key key, this.child}) : super(key: key);
+  const LayoutTemplate({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +22,11 @@ class LayoutTemplate extends StatelessWidget {
             children: <Widget>[
               NavigationBar(),
               Expanded(
-                child: child,
+                child: Navigator(
+                  key: locator<NavigationService>().navigatorKey,
+                  onGenerateRoute: generateRoute,
+                  initialRoute: HomeRoute,
+                ),
               ),
             ],
           ),
@@ -31,11 +34,13 @@ class LayoutTemplate extends StatelessWidget {
         persistentFooterButtons: <Widget>[
           FlatButton(
             child: _text('Privacy Policy'),
-            onPressed: () => Navigator.of(context).pushNamed(LegalDocumentView.privacyRoute),
+            onPressed: () =>
+                locator<NavigationService>().navigateTo(PrivacyRoute),
           ),
           FlatButton(
             child: _text('Terms and Conditions'),
-            onPressed: () => Navigator.of(context).pushNamed(LegalDocumentView.termsRoute),
+            onPressed: () =>
+                locator<NavigationService>().navigateTo(TermsRoute),
           ),
         ],
       ),
@@ -49,10 +54,3 @@ class LayoutTemplate extends StatelessWidget {
     );
   }
 }
-
-
-// Navigator(
-//   key: locator<NavigationService>().navigatorKey,
-//   onGenerateRoute: generateRoute,
-//   initialRoute: HomeRoute,
-// ),

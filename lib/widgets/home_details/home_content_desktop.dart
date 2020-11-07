@@ -7,15 +7,24 @@ class HomeContentDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: <Widget>[
-        HomeDetails(),
-        Expanded(
-          child: Center(
-            child: CallToAction('Download Now'),
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          Container(
+            margin: const EdgeInsets.only(top: 45, bottom: 25),
+            child: Row(
+              children: <Widget>[
+                HomeDetails(),
+                Expanded(
+                  child: Center(
+                    child: CallToAction('Download Now'),
+                  ),
+                )
+              ],
+            ),
           ),
-        )
-      ],
+        ],
+      ),
     );
   }
 }

@@ -20,7 +20,7 @@ class HomeDetails extends StatelessWidget {
               : 21;
       return Container(
         width: 600,
-        padding: const EdgeInsets.all(8.0),
+        padding: sizingInformation.deviceScreenType == DeviceScreenType.desktop ? EdgeInsets.only(left: 40.0) : null,
         child: Column(
           crossAxisAlignment:
               sizingInformation.deviceScreenType == DeviceScreenType.mobile
