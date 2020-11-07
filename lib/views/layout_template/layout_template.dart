@@ -28,10 +28,28 @@ class LayoutTemplate extends StatelessWidget {
                   initialRoute: HomeRoute,
                 ),
               ),
+              //Footer(),
             ],
           ),
         ),
+        persistentFooterButtons: <Widget>[
+          FlatButton(
+            child: _text('Privacy Policy'),
+            onPressed: () => locator<NavigationService>().navigateTo('privacy'),
+          ),
+          FlatButton(
+            child: _text('Terms and Conditions'),
+            onPressed: () => locator<NavigationService>().navigateTo('terms'),
+          ),
+        ],
       ),
+    );
+  }
+
+  Widget _text(String title) {
+    return Text(
+      title,
+      style: TextStyle(fontSize: 12.0),
     );
   }
 }

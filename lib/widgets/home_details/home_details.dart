@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class HomeDetails extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return ResponsiveBuilder(builder: (context, sizingInformation) {
@@ -13,14 +12,20 @@ class HomeDetails extends StatelessWidget {
 
       double titleSize =
           sizingInformation.deviceScreenType == DeviceScreenType.mobile
-              ? 50
+              ? 55
               : 80;
-      double descriptionSize = sizingInformation.deviceScreenType == DeviceScreenType.mobile ?
-      16 : 21;
+      double descriptionSize =
+          sizingInformation.deviceScreenType == DeviceScreenType.mobile
+              ? 16
+              : 21;
       return Container(
         width: 600,
+        padding: const EdgeInsets.all(8.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment:
+              sizingInformation.deviceScreenType == DeviceScreenType.mobile
+                  ? CrossAxisAlignment.center
+                  : CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(

@@ -34,6 +34,10 @@ collection
 2.10
 file:///Users/oskarklonowski/flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.15.0-nullsafety.3/
 file:///Users/oskarklonowski/flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.15.0-nullsafety.3/lib/
+conditional_builder
+2.1
+file:///Users/oskarklonowski/flutter/.pub-cache/hosted/pub.dartlang.org/conditional_builder-1.0.2/
+file:///Users/oskarklonowski/flutter/.pub-cache/hosted/pub.dartlang.org/conditional_builder-1.0.2/lib/
 convert
 1.17
 file:///Users/oskarklonowski/flutter/.pub-cache/hosted/pub.dartlang.org/convert-2.1.1/
@@ -54,6 +58,14 @@ fake_async
 2.10
 file:///Users/oskarklonowski/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.2.0-nullsafety.1/
 file:///Users/oskarklonowski/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.2.0-nullsafety.1/lib/
+flutter_easyloading
+2.2
+file:///Users/oskarklonowski/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_easyloading-2.0.1/
+file:///Users/oskarklonowski/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_easyloading-2.0.1/lib/
+flutter_spinkit
+2.5
+file:///Users/oskarklonowski/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_spinkit-4.1.2+1/
+file:///Users/oskarklonowski/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_spinkit-4.1.2+1/lib/
 get_it
 2.1
 file:///Users/oskarklonowski/flutter/.pub-cache/hosted/pub.dartlang.org/get_it-5.0.1/

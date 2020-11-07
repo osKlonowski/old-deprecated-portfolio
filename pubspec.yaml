@@ -28,6 +28,8 @@ dependencies:
   responsive_builder: ^0.1.2
   native_pdf_renderer: ^2.3.2
   get_it:
+  conditional_builder: ^1.0.2
+  flutter_easyloading: ^2.0.1
 
 dev_dependencies:
   flutter_test:
@@ -47,6 +49,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/logo.png
+    - assets/privacy_policy.pdf
+    - assets/terms_and_conditions.pdf
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

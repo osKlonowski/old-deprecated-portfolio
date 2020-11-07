@@ -3,6 +3,7 @@ import 'package:necter_web/routing/route_names.dart';
 import 'package:necter_web/views/about/about_view.dart';
 import 'package:necter_web/views/contact/contact_view.dart';
 import 'package:necter_web/views/home_view.dart';
+import 'package:necter_web/views/legal/legal_document_view.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   print('generateRoute: ${settings.name}');
@@ -13,6 +14,11 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return _getPageRoute(ContactView());
     case AboutRoute:
       return _getPageRoute(AboutView());
+    case TermsRoute:
+      return _getPageRoute(
+          LegalDocumentView('assets/terms_and_conditions.pdf'));
+    case PrivacyRoute:
+      return _getPageRoute(LegalDocumentView('assets/privacy_policy.pdf'));
     default:
       return _getPageRoute(HomeView());
   }
