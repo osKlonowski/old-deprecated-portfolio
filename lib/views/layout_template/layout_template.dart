@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:necter_web/locator.dart';
 import 'package:necter_web/routing/route_names.dart';
 import 'package:necter_web/services/navigation_service.dart';
+import 'package:necter_web/views/legal/legal_document_view.dart';
 import 'package:necter_web/widgets/centered_view/centered_view.dart';
 import 'package:necter_web/widgets/nav_drawer/navigation_drawer.dart';
 import 'package:necter_web/widgets/navigation_bar/navigation_bar.dart';
@@ -30,11 +31,11 @@ class LayoutTemplate extends StatelessWidget {
         persistentFooterButtons: <Widget>[
           FlatButton(
             child: _text('Privacy Policy'),
-            onPressed: () => locator<NavigationService>().navigateTo(PrivacyRoute),
+            onPressed: () => Navigator.of(context).pushNamed(LegalDocumentView.privacyRoute),
           ),
           FlatButton(
             child: _text('Terms and Conditions'),
-            onPressed: () => locator<NavigationService>().navigateTo(TermsRoute),
+            onPressed: () => Navigator.of(context).pushNamed(LegalDocumentView.termsRoute),
           ),
         ],
       ),
