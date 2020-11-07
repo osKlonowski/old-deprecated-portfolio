@@ -1,7 +1,6 @@
 import 'package:conditional_builder/conditional_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:native_pdf_renderer/native_pdf_renderer.dart';
 
 class LegalDocumentView extends StatefulWidget {
@@ -56,10 +55,10 @@ class _LegalDocumentViewState extends State<LegalDocumentView> {
           });
         });
       } on PlatformException catch (e) {
-        EasyLoading.showError(e.toString());
+        //EasyLoading.showError(e.toString());
       }
     } else {
-      EasyLoading.showToast('You have reached the end of the document.', toastPosition: EasyLoadingToastPosition.bottom);
+      //EasyLoading.showToast('You have reached the end of the document.', toastPosition: EasyLoadingToastPosition.bottom);
     }
   }
 
@@ -78,10 +77,10 @@ class _LegalDocumentViewState extends State<LegalDocumentView> {
           });
         });
       } on PlatformException catch (e) {
-        EasyLoading.showError(e.toString());
+        //EasyLoading.showError(e.toString());
       }
     } else {
-      EasyLoading.showToast('This is the beginning of the document.', toastPosition: EasyLoadingToastPosition.bottom);
+      //EasyLoading.showToast('This is the beginning of the document.', toastPosition: EasyLoadingToastPosition.bottom);
     }
   }
 

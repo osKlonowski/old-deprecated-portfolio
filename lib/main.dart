@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:necter_web/locator.dart';
+import 'package:necter_web/routing/route_names.dart';
+import 'package:necter_web/routing/router.dart';
+import 'package:necter_web/services/navigation_service.dart';
 import 'package:necter_web/views/layout_template/layout_template.dart';
 
 void main() {
@@ -9,7 +11,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,9 +20,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: LayoutTemplate(),
-      builder: (BuildContext context, Widget child) {
-        return FlutterEasyLoading(child: child);
-      },
+      builder: (BuildContext context, Widget child) => LayoutTemplate(child: child),
+      navigatorKey: locator<NavigationService>().navigatorKey,
+      onGenerateRoute: generateRoute,
+      initialRoute: HomeRoute,
     );
   }
 }
