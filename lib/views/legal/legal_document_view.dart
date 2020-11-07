@@ -6,6 +6,8 @@ import 'package:native_pdf_renderer/native_pdf_renderer.dart';
 class LegalDocumentView extends StatefulWidget {
   final String docPath;
   const LegalDocumentView(this.docPath);
+  // static const String privacyRoute = '/privacy-policy';
+  // static const String termsRoute = '/terms-and-conditions';
 
   @override
   _LegalDocumentViewState createState() => _LegalDocumentViewState();

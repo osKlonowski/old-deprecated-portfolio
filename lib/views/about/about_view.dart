@@ -5,6 +5,7 @@ import 'package:responsive_builder/responsive_builder.dart';
 
 class AboutView extends StatelessWidget {
   const AboutView({Key key}) : super(key: key);
+  static const String route = '/about';
 
   @override
   Widget build(BuildContext context) {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:necter_web/locator.dart';
+import 'package:necter_web/routing/route_names.dart';
 import 'package:necter_web/services/navigation_service.dart';
 import 'package:necter_web/widgets/centered_view/centered_view.dart';
 import 'package:necter_web/widgets/nav_drawer/navigation_drawer.dart';
@@ -29,11 +30,11 @@ class LayoutTemplate extends StatelessWidget {
         persistentFooterButtons: <Widget>[
           FlatButton(
             child: _text('Privacy Policy'),
-            onPressed: () => locator<NavigationService>().navigateTo('/privacy'),
+            onPressed: () => locator<NavigationService>().navigateTo(PrivacyRoute),
           ),
           FlatButton(
             child: _text('Terms and Conditions'),
-            onPressed: () => locator<NavigationService>().navigateTo('/terms'),
+            onPressed: () => locator<NavigationService>().navigateTo(TermsRoute),
           ),
         ],
       ),

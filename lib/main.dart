@@ -19,6 +19,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      // routes: {
+      //   HomeView.route: (context) => HomeView(),
+      //   AboutView.route: (context) => AboutView(),
+      //   ContactView.route: (context) => ContactView(),
+      //   LegalDocumentView.privacyRoute: (context) => LegalDocumentView('assets/privacy_policy.pdf'),
+      //   LegalDocumentView.termsRoute: (context) => LegalDocumentView('assets/terms_and_conditions.pdf'),
+      // },
       home: LayoutTemplate(),
       builder: (BuildContext context, Widget child) => LayoutTemplate(child: child),
       navigatorKey: locator<NavigationService>().navigatorKey,

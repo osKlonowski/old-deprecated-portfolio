@@ -20,6 +20,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case PrivacyRoute:
       return _getPageRoute(LegalDocumentView('assets/privacy_policy.pdf'));
     default:
+      print('generate Route failed to default');
       return _getPageRoute(HomeView());
   }
 }
