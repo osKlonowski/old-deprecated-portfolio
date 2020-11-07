@@ -59,7 +59,7 @@ class _LegalDocumentViewState extends State<LegalDocumentView> {
         EasyLoading.showError(e.toString());
       }
     } else {
-      EasyLoading.showToast('You have reached the end of the document.');
+      EasyLoading.showToast('You have reached the end of the document.', toastPosition: EasyLoadingToastPosition.bottom);
     }
   }
 
@@ -81,7 +81,7 @@ class _LegalDocumentViewState extends State<LegalDocumentView> {
         EasyLoading.showError(e.toString());
       }
     } else {
-      EasyLoading.showToast('This is the beginning of the document.');
+      EasyLoading.showToast('This is the beginning of the document.', toastPosition: EasyLoadingToastPosition.bottom);
     }
   }
 

@@ -8,6 +8,7 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //EasyLoading.showToast('This website does not collect any cookies!');
     return ScreenTypeLayout(
       mobile: HomeContentMobile(),
       desktop: HomeContentDesktop(),
