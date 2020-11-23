@@ -34,13 +34,11 @@ class LayoutTemplate extends StatelessWidget {
         persistentFooterButtons: <Widget>[
           FlatButton(
             child: _text('Privacy Policy'),
-            onPressed: () =>
-                locator<NavigationService>().navigateTo(PrivacyRoute),
+            onPressed: () => Navigator.pushNamed(context, '/privacy-policy'),
           ),
           FlatButton(
             child: _text('Terms and Conditions'),
-            onPressed: () =>
-                locator<NavigationService>().navigateTo(TermsRoute),
+            onPressed: () => Navigator.pushNamed(context, '/terms-and-conditions'),
           ),
         ],
       ),
