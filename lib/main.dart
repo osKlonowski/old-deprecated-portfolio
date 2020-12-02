@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:necter_web/views/home_view.dart';
+import 'package:necter_web/views/legal/imprint_view.dart';
 import 'package:necter_web/views/legal/legal_document_view.dart';
 
 void main() {
@@ -16,14 +17,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomeView(),
       builder: (BuildContext context, Widget child) => FlutterEasyLoading(child: child),
-      // initialRoute: '/',
-      // routes: {
-      //   '/': (context) => HomeView(),
-      //   '/terms-and-conditions': (context) => LegalDocumentView('assets/terms_and_conditions.pdf'),
-      //   '/privacy-policy': (context) => LegalDocumentView('assets/privacy_policy.pdf'),
-      // },
+      initialRoute: '/',
+      routes: {
+        '/': (context) => HomeView(),
+        '/terms-and-conditions': (context) => LegalDocumentView('assets/terms_and_conditions.pdf'),
+        '/privacy-policy': (context) => LegalDocumentView('assets/privacy_policy.pdf'),
+        '/imprint': (context) => Imprint(),
+      },
     );
   }
 }

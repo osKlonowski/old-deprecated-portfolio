@@ -1,23 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:necter_web/constants/app_colors.dart';
 import 'package:necter_web/utils/responsiveLayout.dart';
 
 class NavBar extends StatelessWidget {
   final navLinks = ["Home", "Contact"];
 
-  List<Widget> navItem() {
+  List<Widget> navItem(BuildContext context) {
     return navLinks.map((text) {
       return GestureDetector(
         onTap: () {
-          EasyLoading.showToast('Coming Soon...',
+          if(text == 'Home') {
+            Navigator.pushNamed(context, '/');
+          } else {
+            EasyLoading.showToast('Coming Soon...',
               toastPosition: EasyLoadingToastPosition.bottom);
+          }
         },
         child: Padding(
           padding: EdgeInsets.only(left: 18),
           child: Text(
             text,
             style: TextStyle(
-                fontFamily: "Montserrat-Bold", color: Colors.grey[400]),
+              fontFamily: "Montserrat-Bold",
+              color: text == 'Home' ? Colors.black54 : Colors.grey[400],
+            ),
           ),
         ),
       );
@@ -34,14 +41,18 @@ class NavBar extends StatelessWidget {
           Row(
             children: <Widget>[
               Container(
-                width: 60,
-                height: 60,
+                width: 50,
+                height: 50,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(18),
-                  gradient: LinearGradient(colors: [
-                    Color(0xFFe50449),
-                    Color(0xFF795dad),
-                  ], begin: Alignment.bottomRight, end: Alignment.topLeft),
+                  gradient: LinearGradient(
+                    colors: [
+                      Color(0xFFe50449),
+                      Color(0xFF795dad),
+                    ],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
                 ),
                 child: Center(
                   child:
@@ -63,7 +74,7 @@ class NavBar extends StatelessWidget {
           if (!ResponsiveLayout.isSmallScreen(context))
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: <Widget>[...navItem()]..add(InkWell(
+              children: <Widget>[...navItem(context)]..add(InkWell(
                     child: Container(
                   margin: EdgeInsets.only(left: 20),
                   width: 180,
@@ -76,9 +87,10 @@ class NavBar extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                       boxShadow: [
                         BoxShadow(
-                            color: Color(0xFF6078ea).withOpacity(.3),
-                            offset: Offset(0, 8),
-                            blurRadius: 8)
+                          color: Color(0xFF6078ea).withOpacity(.3),
+                          offset: Offset(0, 8),
+                          blurRadius: 8,
+                        )
                       ]),
                   child: Material(
                     color: Colors.transparent,
@@ -97,7 +109,7 @@ class NavBar extends StatelessWidget {
                 ))),
             )
           else
-            Image.network("assets/menu.png", width: 26, height: 26)
+            Icon(Icons.menu, color: primaryColor)
         ],
       ),
     );

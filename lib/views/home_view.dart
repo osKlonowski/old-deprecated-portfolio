@@ -2,17 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:necter_web/constants/app_colors.dart';
 import 'package:necter_web/utils/responsiveLayout.dart';
 import 'package:necter_web/widgets/navbar.dart';
-import 'package:necter_web/widgets/search.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          gradient: LinearGradient(colors: [
-        Color(0xFFF8FBFF),
-        Color(0xFFFCFDFD),
-      ])),
+        gradient: LinearGradient(
+          colors: [
+            Color(0xFFF8FBFF),
+            Color(0xFFFCFDFD),
+          ],
+        ),
+      ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
         body: SingleChildScrollView(
@@ -21,6 +24,10 @@ class HomeView extends StatelessWidget {
           ),
         ),
         persistentFooterButtons: <Widget>[
+          FlatButton(
+            child: Text('Imprint'),
+            onPressed: () => Navigator.pushNamed(context, '/imprint'),
+          ),
           FlatButton(
             child: Text('Privacy Policy'),
             onPressed: () => Navigator.pushNamed(context, '/privacy-policy'),
@@ -57,7 +64,8 @@ class LargeChild extends StatelessWidget {
           FractionallySizedBox(
             alignment: Alignment.centerRight,
             widthFactor: .6,
-            child: Image.asset('assets/mock-up.png', fit: BoxFit.fitHeight,),
+            child: FadeInImage.memoryNetwork(
+                placeholder: kTransparentImage, image: 'assets/mock-up.png'),
           ),
           FractionallySizedBox(
             alignment: Alignment.centerLeft,
@@ -72,30 +80,40 @@ class LargeChild extends StatelessWidget {
                     "Necter",
                     style: TextStyle(
                       fontSize: 70,
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w800,
                       fontFamily: "Montserrat-Regular",
                       color: primaryColor,
                     ),
                   ),
                   RichText(
                     text: TextSpan(
-                        text: "Coming in ",
-                        style:
-                            TextStyle(fontSize: 60, color: Color(0xFF8591B0)),
-                        children: [
-                          TextSpan(
-                            text: "April 2020",
-                            style: TextStyle(
-                              fontSize: 60,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black54,
-                            ),
-                          )
-                        ]),
+                      text: "Coming in ",
+                      style: TextStyle(
+                        fontSize: 60,
+                        color: Color(0xFF8591B0),
+                      ),
+                      children: [
+                        TextSpan(
+                          text: "Spring 2020",
+                          style: TextStyle(
+                            fontSize: 60,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black54,
+                            //foreground: Paint()..shader = linearGradient,
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 12.0, top: 20),
-                    child: Text("Blurring the line between online and offline dating."),
+                    padding: const EdgeInsets.only(left: 8.0, top: 20),
+                    child: Text(
+                      "Blurring the line between online and offline dating.",
+                      style: TextStyle(
+                          fontFamily: 'Raleway',
+                          color: Color(0xFF8591B0),
+                          fontSize: 16.0),
+                    ),
                   ),
                   SizedBox(
                     height: 40,
@@ -123,18 +141,23 @@ class SmallChild extends StatelessWidget {
             Text(
               "Necter",
               style: TextStyle(
-                  fontSize: 40,
-                  color: Color(0xFF8591B0),
-                  fontWeight: FontWeight.bold,
-                  fontFamily: "Montserrat-Regular"),
+                fontSize: 60,
+                color: primaryColor,
+                fontWeight: FontWeight.w800,
+                fontFamily: "Montserrat-Regular",
+              ),
             ),
             RichText(
+              //TODO: Try gradient
               text: TextSpan(
                 text: 'Coming in ',
-                style: TextStyle(fontSize: 40, color: Color(0xFF8591B0)),
+                style: TextStyle(
+                  fontSize: 40,
+                  color: Color(0xFF8591B0),
+                ),
                 children: <TextSpan>[
                   TextSpan(
-                    text: 'April 2020',
+                    text: 'Spring 2020',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 40,
@@ -145,8 +168,14 @@ class SmallChild extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 12.0, top: 20),
-              child: Text("Blurring the line between online and offline dating."),
+              padding: const EdgeInsets.only(left: 8.0, top: 20.0),
+              child: Text(
+                "Blurring the line between online and offline dating.",
+                style: TextStyle(
+                  fontFamily: 'Raleway',
+                  color: Color(0xFF8591B0),
+                ),
+              ),
             ),
             SizedBox(
               height: 30,
@@ -160,7 +189,7 @@ class SmallChild extends StatelessWidget {
             SizedBox(
               height: 32,
             ),
-            Search(),
+            //Search(),
             SizedBox(
               height: 30,
             )

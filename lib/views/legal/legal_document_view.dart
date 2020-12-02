@@ -89,53 +89,63 @@ class _LegalDocumentViewState extends State<LegalDocumentView> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: LayoutBuilder(builder: (context, constraints) {
-        return Container(
-          width: constraints.maxWidth,
-          height: constraints.maxHeight,
-          child: Stack(
-            children: [
-              ConditionalBuilder(
-                condition: isLoaded,
-                builder: (context) {
-                  return Positioned.fill(
-                    child: Image(
-                      height: constraints.maxHeight,
-                      image: MemoryImage(pageImage.bytes),
-                    ),
-                  );
-                },
-                fallback: (context) {
-                  return Center(
-                    child: CircularProgressIndicator(),
-                  );
-                },
-              ),
-              Positioned(
-                bottom: 20,
-                right: 20,
-                child: FlatButton(
-                  child: Text('Next Page'),
-                  onPressed: () {
-                    _loadNextPage();
+    return Scaffold(
+      body: SafeArea(
+        child: LayoutBuilder(builder: (context, constraints) {
+          return Container(
+            width: constraints.maxWidth,
+            height: constraints.maxHeight,
+            child: Stack(
+              children: [
+                ConditionalBuilder(
+                  condition: isLoaded,
+                  builder: (context) {
+                    return Positioned.fill(
+                      child: Image(
+                        height: constraints.maxHeight,
+                        image: MemoryImage(pageImage.bytes),
+                      ),
+                    );
+                  },
+                  fallback: (context) {
+                    return Center(
+                      child: CircularProgressIndicator(),
+                    );
                   },
                 ),
-              ),
-              Positioned(
-                bottom: 20,
-                left: 20,
-                child: FlatButton(
-                  child: Text('Previous Page'),
-                  onPressed: () {
-                    _loadPrevPage();
-                  },
+                Positioned(
+                  top: 12.0,
+                  left: 12.0,
+                  child: FlatButton(
+                    onPressed: () => Navigator.pop(context),
+                    child: Text('Return to Home'),
+                  ),
                 ),
-              ),
-            ],
-          ),
-        );
-      }),
+                Positioned(
+                  bottom: 20,
+                  right: 20,
+                  child: FlatButton(
+                    child: Text('Next Page'),
+                    onPressed: () {
+                      _loadNextPage();
+                    },
+                  ),
+                ),
+                Positioned(
+                  bottom: 20,
+                  left: 20,
+                  child: FlatButton(
+                    child: Text('Previous Page'),
+                    onPressed: () {
+                      _loadPrevPage();
+                    },
+                  ),
+                ),
+              ],
+            ),
+          );
+        }),
+      ),
     );
   }
 
