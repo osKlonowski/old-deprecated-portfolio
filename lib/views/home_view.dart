@@ -64,8 +64,7 @@ class LargeChild extends StatelessWidget {
           FractionallySizedBox(
             alignment: Alignment.centerRight,
             widthFactor: .6,
-            child: FadeInImage.memoryNetwork(
-                placeholder: kTransparentImage, image: 'assets/mock-up.png'),
+            child: Image.asset('assets/mock-up.png', fit: BoxFit.fitHeight),
           ),
           FractionallySizedBox(
             alignment: Alignment.centerLeft,
@@ -94,7 +93,7 @@ class LargeChild extends StatelessWidget {
                       ),
                       children: [
                         TextSpan(
-                          text: "Spring 2020",
+                          text: "Spring 2021",
                           style: TextStyle(
                             fontSize: 60,
                             fontWeight: FontWeight.bold,
@@ -157,7 +156,7 @@ class SmallChild extends StatelessWidget {
                 ),
                 children: <TextSpan>[
                   TextSpan(
-                    text: 'Spring 2020',
+                    text: 'Spring 2021',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 40,
