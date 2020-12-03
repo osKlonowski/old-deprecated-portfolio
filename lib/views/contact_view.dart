@@ -8,10 +8,7 @@ class ContactView extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [
-            Color(0xFFF8FBFF),
-            Color(0xFFFCFDFD),
-          ],
+          colors: [Color(0xFFe50449), Color(0xFF795dad)],
         ),
       ),
       child: Scaffold(
@@ -147,10 +144,7 @@ class SmallChild extends StatelessWidget {
             RichText(
               text: TextSpan(
                 text: 'Email: ',
-                style: TextStyle(
-                  fontSize: 40,
-                  color: Colors.white38
-                ),
+                style: TextStyle(fontSize: 40, color: Colors.white38),
                 children: <TextSpan>[
                   TextSpan(
                     text: 'business@necter.io',
