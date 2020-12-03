@@ -10,10 +10,10 @@ class Imprint extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back_ios,
-            color: primaryColor,
+        leading: FlatButton(
+          child: Text(
+            "Return To Home",
+            style: TextStyle(color: primaryColor),
           ),
           onPressed: () => Navigator.pop(context),
         ),
@@ -36,18 +36,74 @@ class Imprint extends StatelessWidget {
         ],
       ),
       body: SafeArea(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Expanded(
-              child: Container(
-                padding: const EdgeInsets.all(12.0),
-                child: Text("TUNED BKT UG (haftungbestrankt)"),
+        child: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Flexible(
+                child: Container(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Text(
+                    'IMPRESSUM',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontFamily: 'Raleway',
+                      fontSize: 35.0,
+                      fontWeight: FontWeight.w500,
+                    ),
+                    softWrap: true,
+                  ),
+                ),
               ),
-            )
-          ],
+              Flexible(
+                child: Container(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Text(
+                    'TUNED BKT UG (haftungsbestrankt)',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontFamily: 'Raleway',
+                      fontSize: 40.0,
+                      fontWeight: FontWeight.w600,
+                    ),
+                    softWrap: true,
+                  ),
+                ),
+              ),
+              Flexible(
+                child: Container(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Text(
+                    'Grootmoorgraben 4\n22175 Hamburg - Germany',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontFamily: 'Raleway',
+                      fontSize: 25.0,
+                      fontWeight: FontWeight.w400,
+                    ),
+                    softWrap: true,
+                  ),
+                ),
+              ),
+              Flexible(
+                child: Container(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Text(
+                    'Geschäftsführer: Joshua Buse\nAmtsgericht Hamburg\nRegister-Nummer: HRB 155122',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontFamily: 'Raleway',
+                      fontSize: 25.0,
+                      fontWeight: FontWeight.w400,
+                    ),
+                    softWrap: true,
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

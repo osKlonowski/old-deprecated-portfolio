@@ -15,7 +15,10 @@ class ContactView extends StatelessWidget {
         backgroundColor: Colors.transparent,
         body: SingleChildScrollView(
           child: Column(
-            children: <Widget>[NavBar(), Body()],
+            children: <Widget>[
+              NavBar(isStyleWhite: true),
+              Body(),
+            ],
           ),
         ),
         persistentFooterButtons: <Widget>[
@@ -56,11 +59,6 @@ class LargeChild extends StatelessWidget {
       child: Stack(
         fit: StackFit.expand,
         children: <Widget>[
-          // FractionallySizedBox(
-          //   alignment: Alignment.centerRight,
-          //   widthFactor: .6,
-          //   child: Image.asset('assets/mock-up.png', fit: BoxFit.fitHeight),
-          // ),
           FractionallySizedBox(
             alignment: Alignment.centerLeft,
             widthFactor: .6,
@@ -101,7 +99,7 @@ class LargeChild extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 8.0, top: 20),
                     child: Text(
-                      "We will do our best to get back to you as soon as possible.",
+                      "We will get back to you as soon as possible.",
                       style: TextStyle(
                         fontFamily: 'Raleway',
                         color: Colors.grey[200],
@@ -170,19 +168,6 @@ class SmallChild extends StatelessWidget {
             SizedBox(
               height: 30,
             ),
-            // Center(
-            //   child: Image.network(
-            //     "assets/image_01.png",
-            //     scale: 1,
-            //   ),
-            // ),
-            // SizedBox(
-            //   height: 32,
-            // ),
-            //Search(),
-            // SizedBox(
-            //   height: 30,
-            // )
           ],
         ),
       ),

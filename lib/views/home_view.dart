@@ -19,7 +19,10 @@ class HomeView extends StatelessWidget {
         backgroundColor: Colors.transparent,
         body: SingleChildScrollView(
           child: Column(
-            children: <Widget>[NavBar(), Body()],
+            children: <Widget>[
+              NavBar(isStyleWhite: false),
+              Body(),
+            ],
           ),
         ),
         persistentFooterButtons: <Widget>[
@@ -178,19 +181,28 @@ class SmallChild extends StatelessWidget {
             SizedBox(
               height: 30,
             ),
+            Center(
+              child: Image.asset(
+                'assets/mock-up.png',
+                fit: BoxFit.contain,
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
             // Center(
             //   child: Image.network(
             //     "assets/image_01.png",
             //     scale: 1,
             //   ),
             // ),
-            SizedBox(
-              height: 32,
-            ),
+            // SizedBox(
+            //   height: 32,
+            // ),
             //Search(),
-            SizedBox(
-              height: 30,
-            )
+            // SizedBox(
+            //   height: 30,
+            // )
           ],
         ),
       ),

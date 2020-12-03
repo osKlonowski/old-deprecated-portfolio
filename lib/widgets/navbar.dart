@@ -3,7 +3,10 @@ import 'package:necter_web/constants/app_colors.dart';
 import 'package:necter_web/utils/responsiveLayout.dart';
 
 class NavBar extends StatelessWidget {
+  final bool isStyleWhite;
   final navLinks = ["Home", "Contact"];
+
+  NavBar({Key key, this.isStyleWhite}) : super(key: key);
 
   List<Widget> navItem(BuildContext context) {
     return navLinks.map((text) {
@@ -21,7 +24,7 @@ class NavBar extends StatelessWidget {
             text,
             style: TextStyle(
               fontFamily: "Montserrat-Bold",
-              color: Colors.black54,
+              color: isStyleWhite ? Colors.white54 : Colors.black54,
             ),
           ),
         ),
@@ -63,9 +66,11 @@ class NavBar extends StatelessWidget {
               Text(
                 "Necter",
                 style: TextStyle(
-                    fontSize: 26,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: 'Raleway'),
+                  fontSize: 26,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Raleway',
+                  color: isStyleWhite ? Colors.white : Colors.black,
+                ),
               ),
             ],
           ),
