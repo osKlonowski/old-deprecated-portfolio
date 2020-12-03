@@ -10,10 +10,10 @@ class Imprint extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        leading: FlatButton(
-          child: Text(
-            "Return To Home",
-            style: TextStyle(color: primaryColor),
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back,
+            color: primaryColor, 
           ),
           onPressed: () => Navigator.pop(context),
         ),
@@ -48,7 +48,7 @@ class Imprint extends StatelessWidget {
                   child: Text(
                     'IMPRESSUM',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.black54,
                       fontFamily: 'Raleway',
                       fontSize: 35.0,
                       fontWeight: FontWeight.w500,
@@ -63,7 +63,7 @@ class Imprint extends StatelessWidget {
                   child: Text(
                     'TUNED BKT UG (haftungsbestrankt)',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.black,
                       fontFamily: 'Raleway',
                       fontSize: 40.0,
                       fontWeight: FontWeight.w600,
@@ -78,7 +78,7 @@ class Imprint extends StatelessWidget {
                   child: Text(
                     'Grootmoorgraben 4\n22175 Hamburg - Germany',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.black,
                       fontFamily: 'Raleway',
                       fontSize: 25.0,
                       fontWeight: FontWeight.w400,
@@ -93,7 +93,7 @@ class Imprint extends StatelessWidget {
                   child: Text(
                     'Geschäftsführer: Joshua Buse\nAmtsgericht Hamburg\nRegister-Nummer: HRB 155122',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.black,
                       fontFamily: 'Raleway',
                       fontSize: 25.0,
                       fontWeight: FontWeight.w400,
