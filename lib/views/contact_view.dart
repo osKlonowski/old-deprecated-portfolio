@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:necter_web/constants/app_colors.dart';
 import 'package:necter_web/utils/responsiveLayout.dart';
 import 'package:necter_web/widgets/navbar.dart';
 
-class HomeView extends StatelessWidget {
+class ContactView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -60,11 +59,11 @@ class LargeChild extends StatelessWidget {
       child: Stack(
         fit: StackFit.expand,
         children: <Widget>[
-          FractionallySizedBox(
-            alignment: Alignment.centerRight,
-            widthFactor: .6,
-            child: Image.asset('assets/mock-up.png', fit: BoxFit.fitHeight),
-          ),
+          // FractionallySizedBox(
+          //   alignment: Alignment.centerRight,
+          //   widthFactor: .6,
+          //   child: Image.asset('assets/mock-up.png', fit: BoxFit.fitHeight),
+          // ),
           FractionallySizedBox(
             alignment: Alignment.centerLeft,
             widthFactor: .6,
@@ -80,24 +79,23 @@ class LargeChild extends StatelessWidget {
                       fontSize: 70,
                       fontWeight: FontWeight.w800,
                       fontFamily: "Montserrat-Regular",
-                      color: primaryColor,
+                      color: Colors.white,
                     ),
                   ),
                   RichText(
                     text: TextSpan(
-                      text: "Coming in ",
+                      text: "Email: ",
                       style: TextStyle(
                         fontSize: 60,
-                        color: Color(0xFF8591B0),
+                        color: Colors.white38,
                       ),
                       children: [
                         TextSpan(
-                          text: "Spring 2021",
+                          text: "business@necter.io",
                           style: TextStyle(
                             fontSize: 60,
                             fontWeight: FontWeight.bold,
-                            color: Colors.black54,
-                            //foreground: Paint()..shader = linearGradient,
+                            color: Colors.white60,
                           ),
                         )
                       ],
@@ -106,11 +104,12 @@ class LargeChild extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 8.0, top: 20),
                     child: Text(
-                      "Blurring the line between online and offline dating.",
+                      "We will do our best to get back to you as soon as possible.",
                       style: TextStyle(
-                          fontFamily: 'Raleway',
-                          color: Color(0xFF8591B0),
-                          fontSize: 16.0),
+                        fontFamily: 'Raleway',
+                        color: Colors.grey[200],
+                        fontSize: 16.0,
+                      ),
                     ),
                   ),
                   SizedBox(
@@ -140,26 +139,25 @@ class SmallChild extends StatelessWidget {
               "Necter",
               style: TextStyle(
                 fontSize: 60,
-                color: primaryColor,
+                color: Colors.white,
                 fontWeight: FontWeight.w800,
                 fontFamily: "Montserrat-Regular",
               ),
             ),
             RichText(
-              //TODO: Try gradient
               text: TextSpan(
-                text: 'Coming in ',
+                text: 'Email: ',
                 style: TextStyle(
                   fontSize: 40,
-                  color: Color(0xFF8591B0),
+                  color: Colors.white38
                 ),
                 children: <TextSpan>[
                   TextSpan(
-                    text: 'Spring 2021',
+                    text: 'business@necter.io',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 40,
-                      color: Colors.black54,
+                      color: Colors.white60,
                     ),
                   ),
                 ],
@@ -168,10 +166,10 @@ class SmallChild extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 8.0, top: 20.0),
               child: Text(
-                "Blurring the line between online and offline dating.",
+                "We will do our best to get back to you as soon as possible.",
                 style: TextStyle(
                   fontFamily: 'Raleway',
-                  color: Color(0xFF8591B0),
+                  color: Colors.grey[200],
                 ),
               ),
             ),
@@ -184,13 +182,13 @@ class SmallChild extends StatelessWidget {
             //     scale: 1,
             //   ),
             // ),
-            SizedBox(
-              height: 32,
-            ),
+            // SizedBox(
+            //   height: 32,
+            // ),
             //Search(),
-            SizedBox(
-              height: 30,
-            )
+            // SizedBox(
+            //   height: 30,
+            // )
           ],
         ),
       ),

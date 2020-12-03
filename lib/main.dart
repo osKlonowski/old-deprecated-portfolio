@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:necter_web/views/contact_view.dart';
 import 'package:necter_web/views/home_view.dart';
 import 'package:necter_web/views/legal/imprint_view.dart';
 import 'package:necter_web/views/legal/legal_document_view.dart';
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => HomeView(),
+        '/contact': (context) => ContactView(),
         '/terms-and-conditions': (context) => LegalDocumentView('assets/terms_and_conditions.pdf'),
         '/privacy-policy': (context) => LegalDocumentView('assets/privacy_policy.pdf'),
         '/imprint': (context) => Imprint(),

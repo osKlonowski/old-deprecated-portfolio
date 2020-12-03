@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:necter_web/constants/app_colors.dart';
 import 'package:necter_web/utils/responsiveLayout.dart';
 
@@ -10,11 +9,10 @@ class NavBar extends StatelessWidget {
     return navLinks.map((text) {
       return GestureDetector(
         onTap: () {
-          if(text == 'Home') {
+          if (text == 'Home') {
             Navigator.pushNamed(context, '/');
-          } else {
-            EasyLoading.showToast('Coming Soon...',
-              toastPosition: EasyLoadingToastPosition.bottom);
+          } else if (text == 'Contact') {
+            Navigator.pushNamed(context, '/contact');
           }
         },
         child: Padding(
@@ -23,7 +21,7 @@ class NavBar extends StatelessWidget {
             text,
             style: TextStyle(
               fontFamily: "Montserrat-Bold",
-              color: text == 'Home' ? Colors.black54 : Colors.grey[400],
+              color: Colors.black54,
             ),
           ),
         ),
@@ -80,10 +78,14 @@ class NavBar extends StatelessWidget {
                   width: 180,
                   height: 40,
                   decoration: BoxDecoration(
-                      gradient: LinearGradient(colors: [
-                        Color(0xFFe50449),
-                        Color(0xFF795dad),
-                      ], begin: Alignment.topLeft, end: Alignment.bottomRight),
+                      gradient: LinearGradient(
+                        colors: [
+                          Color(0xFFe50449),
+                          Color(0xFF795dad),
+                        ],
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                      ),
                       borderRadius: BorderRadius.circular(20),
                       boxShadow: [
                         BoxShadow(
