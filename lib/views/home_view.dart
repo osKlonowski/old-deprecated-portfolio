@@ -26,15 +26,15 @@ class HomeView extends StatelessWidget {
           ),
         ),
         persistentFooterButtons: <Widget>[
-          FlatButton(
+          TextButton(
             child: Text('Imprint'),
             onPressed: () => Navigator.pushNamed(context, '/imprint'),
           ),
-          FlatButton(
+          TextButton(
             child: Text('Privacy Policy'),
             onPressed: () => Navigator.pushNamed(context, '/privacy-policy'),
           ),
-          FlatButton(
+          TextButton(
             child: Text('Terms and Conditions'),
             onPressed: () =>
                 Navigator.pushNamed(context, '/terms-and-conditions'),
@@ -149,7 +149,6 @@ class SmallChild extends StatelessWidget {
               ),
             ),
             RichText(
-              //TODO: Try gradient
               text: TextSpan(
                 text: 'Coming in ',
                 style: TextStyle(

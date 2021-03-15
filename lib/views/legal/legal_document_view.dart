@@ -116,7 +116,7 @@ class _LegalDocumentViewState extends State<LegalDocumentView> {
                 Positioned(
                   top: 25.0,
                   left: 25.0,
-                  child: FlatButton(
+                  child: TextButton(
                     onPressed: () => Navigator.pop(context),
                     child: Text('Return to Home'),
                   ),
@@ -124,7 +124,7 @@ class _LegalDocumentViewState extends State<LegalDocumentView> {
                 Positioned(
                   bottom: 60,
                   right: 60,
-                  child: FlatButton(
+                  child: TextButton(
                     child: Text('Next Page'),
                     onPressed: () {
                       _loadNextPage();
@@ -134,7 +134,7 @@ class _LegalDocumentViewState extends State<LegalDocumentView> {
                 Positioned(
                   bottom: 60,
                   left: 60,
-                  child: FlatButton(
+                  child: TextButton(
                     child: Text('Previous Page'),
                     onPressed: () {
                       _loadPrevPage();

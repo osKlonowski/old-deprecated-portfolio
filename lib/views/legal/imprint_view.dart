@@ -20,7 +20,7 @@ class Imprint extends StatelessWidget {
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 22.0),
-            child: FlatButton(
+            child: TextButton(
               onPressed: () => Navigator.pushNamed(context, '/'),
               child: Text(
                 'Necter',
