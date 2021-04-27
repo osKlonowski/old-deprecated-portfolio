@@ -18,13 +18,15 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      builder: (BuildContext context, Widget child) => FlutterEasyLoading(child: child),
+      builder: EasyLoading.init(),
       initialRoute: '/',
       routes: {
         '/': (context) => HomeView(),
         '/contact': (context) => ContactView(),
-        '/terms-and-conditions': (context) => LegalDocumentView('assets/terms_and_conditions.pdf'),
-        '/privacy-policy': (context) => LegalDocumentView('assets/privacy_policy.pdf'),
+        '/terms-and-conditions': (context) =>
+            LegalDocumentView('assets/terms_and_conditions.pdf'),
+        '/privacy-policy': (context) =>
+            LegalDocumentView('assets/privacy_policy.pdf'),
         '/imprint': (context) => Imprint(),
       },
     );

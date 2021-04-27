@@ -93,7 +93,7 @@
     },
     {
       "name": "flutter_easyloading",
-      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_easyloading-2.0.1",
+      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_easyloading-2.2.2",
       "packageUri": "lib/",
       "languageVersion": "2.2"
     },
@@ -254,7 +254,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2021-03-15T21:32:06.392180Z",
+  "generated": "2021-04-27T12:09:48.456667Z",
   "generator": "pub",
-  "generatorVersion": "2.12.1"
+  "generatorVersion": "2.12.3"
 }
