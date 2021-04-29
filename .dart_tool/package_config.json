@@ -3,15 +3,9 @@
   "packages": [
     {
       "name": "archive",
-      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/archive-2.0.13",
+      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/archive-3.1.2",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
-    },
-    {
-      "name": "args",
-      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/args-1.6.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.3"
+      "languageVersion": "2.12"
     },
     {
       "name": "async",
@@ -56,16 +50,10 @@
       "languageVersion": "2.1"
     },
     {
-      "name": "convert",
-      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/convert-2.1.1",
-      "packageUri": "lib/",
-      "languageVersion": "1.17"
-    },
-    {
       "name": "crypto",
-      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/crypto-2.1.5",
+      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/crypto-3.0.1",
       "packageUri": "lib/",
-      "languageVersion": "2.3"
+      "languageVersion": "2.12"
     },
     {
       "name": "cupertino_icons",
@@ -74,14 +62,38 @@
       "languageVersion": "2.0"
     },
     {
-      "name": "extension",
-      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/extension-0.1.1",
+      "name": "device_info",
+      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/device_info-2.0.0",
       "packageUri": "lib/",
-      "languageVersion": "2.6"
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "device_info_platform_interface",
+      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/device_info_platform_interface-2.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "extension",
+      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/extension-0.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "fake_async",
       "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "ffi",
+      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/ffi-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "file",
+      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/file-6.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -116,16 +128,40 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "font_awesome_flutter",
+      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/font_awesome_flutter-9.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "get_it",
       "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/get_it-5.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.1"
     },
     {
-      "name": "image",
-      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/image-2.1.18",
+      "name": "google_fonts",
+      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/google_fonts-2.0.0",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "http",
+      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/http-0.13.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "http_parser",
+      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/http_parser-4.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "image",
+      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/image-3.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "js",
@@ -147,9 +183,9 @@
     },
     {
       "name": "native_pdf_renderer",
-      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/native_pdf_renderer-2.3.2",
+      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/native_pdf_renderer-3.0.0",
       "packageUri": "lib/",
-      "languageVersion": "2.7"
+      "languageVersion": "2.12"
     },
     {
       "name": "path",
@@ -158,10 +194,64 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "petitparser",
-      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/petitparser-3.1.0",
+      "name": "path_provider",
+      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-2.0.1",
       "packageUri": "lib/",
-      "languageVersion": "2.7"
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "path_provider_linux",
+      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "path_provider_macos",
+      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_macos-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "path_provider_platform_interface",
+      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_platform_interface-2.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "path_provider_windows",
+      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-2.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "pedantic",
+      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/pedantic-1.11.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "petitparser",
+      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/petitparser-4.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "platform",
+      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/platform-3.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "plugin_platform_interface",
+      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "process",
+      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/process-4.2.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "responsive_builder",
@@ -201,9 +291,9 @@
     },
     {
       "name": "synchronized",
-      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/synchronized-2.2.0+2",
+      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/synchronized-3.0.0",
       "packageUri": "lib/",
-      "languageVersion": "2.8"
+      "languageVersion": "2.12"
     },
     {
       "name": "term_glyph",
@@ -231,9 +321,9 @@
     },
     {
       "name": "uuid",
-      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/uuid-2.2.2",
+      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/uuid-3.0.4",
       "packageUri": "lib/",
-      "languageVersion": "2.2"
+      "languageVersion": "2.12"
     },
     {
       "name": "vector_math",
@@ -242,10 +332,22 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "xml",
-      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/xml-4.5.1",
+      "name": "win32",
+      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/win32-2.0.5",
       "packageUri": "lib/",
-      "languageVersion": "2.7"
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "xdg_directories",
+      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/xdg_directories-0.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "xml",
+      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/xml-5.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "necter_web",
@@ -254,7 +356,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2021-04-27T12:09:48.456667Z",
+  "generated": "2021-04-29T12:25:13.012430Z",
   "generator": "pub",
   "generatorVersion": "2.12.3"
 }
