@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:necter_web/constants/app_colors.dart';
 import 'package:necter_web/constants/text_styles.dart';
+import 'dart:html' as html;
 
 class Footer extends StatelessWidget {
-  const Footer({Key key}) : super(key: key);
+  const Footer({Key key});
 
   @override
   Widget build(BuildContext context) {
+    Size _size = MediaQuery.of(context).size;
     return Container(
       padding: const EdgeInsets.all(26.0),
       color: red,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
-        // crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           IntrinsicHeight(
             child: Row(
@@ -28,9 +29,14 @@ class Footer extends StatelessWidget {
                       'SAFETY',
                       style: kFooterSectionTitleTextStyle,
                     ),
-                    Text(
-                      'FAQ',
-                      style: kFooterLinkTextStyle,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/faq');
+                      },
+                      child: Text(
+                        'FAQ',
+                        style: kFooterLinkTextStyle,
+                      ),
                     ),
                     Text(
                       'Guidelines',
@@ -64,18 +70,24 @@ class Footer extends StatelessWidget {
                       'Terms of Service',
                       style: kFooterLinkTextStyle,
                     ),
-                    Text(
-                      'Press',
-                      style: kFooterLinkTextStyle,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/contact');
+                      },
+                      child: Text(
+                        'Imprint',
+                        style: kFooterLinkTextStyle,
+                      ),
                     ),
-                    Text(
-                      'Jobs',
-                      style: kFooterLinkTextStyle,
-                    ),
-                    Text(
-                      'Copyright Inquiry',
-                      style: kFooterLinkTextStyle,
-                    ),
+                    // TextButton(
+                    //   onPressed: () {
+                    //     Navigator.pushNamed(context, '/contact');
+                    //   },
+                    //   child: Text(
+                    //     'Imprint',
+                    //     style: kFooterLinkTextStyle,
+                    //   ),
+                    // )
                   ],
                 ),
                 SizedBox(width: 14),
@@ -96,18 +108,41 @@ class Footer extends StatelessWidget {
                       'CONNECT',
                       style: kFooterSectionTitleTextStyle,
                     ),
-                    Text(
-                      'Instagram',
-                      style: kFooterLinkTextStyle,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/contact');
+                      },
+                      child: Text(
+                        'Contact',
+                        style: kFooterLinkTextStyle,
+                      ),
                     ),
-                    Text(
-                      'Facebook',
-                      style: kFooterLinkTextStyle,
+                    GestureDetector(
+                      onTap: () {
+                        html.window.open('https://www.instagram.com/necter/',
+                            'Necter-Instagram');
+                      },
+                      child: Text(
+                        'Instagram',
+                        style: kFooterLinkTextStyle,
+                      ),
                     ),
-                    Text(
-                      'Blog',
-                      style: kFooterLinkTextStyle,
+                    GestureDetector(
+                      onTap: () {
+                        //TODO: FIX-LINK URL
+                        html.window.open(
+                            'https://www.facebook.com/Necter-110394790575070',
+                            'Necter-Facebook');
+                      },
+                      child: Text(
+                        'Facebook',
+                        style: kFooterLinkTextStyle,
+                      ),
                     ),
+                    // Text(
+                    //   'Blog',
+                    //   style: kFooterLinkTextStyle,
+                    // ),
                   ],
                 ),
               ],
@@ -120,7 +155,7 @@ class Footer extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
-                  '@Copyright bla bla bla.',
+                  '© Copyright TUNED BKT UG (haftungsbestrankt) 2021 - All Rights Reserved',
                   textAlign: TextAlign.left,
                   style: kFooterLinkTextStyle,
                 ),
