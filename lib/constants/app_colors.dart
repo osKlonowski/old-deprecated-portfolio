@@ -38,6 +38,15 @@ const Gradient redBlueGradient = LinearGradient(
   end: Alignment.bottomRight,
 );
 
+const Gradient blueGreenGradient = LinearGradient(
+  colors: [
+    Color(0xFF3C91E6), //BLUE
+    Color(0xFF00D4A8), //GREEN
+  ],
+  begin: Alignment.topLeft,
+  end: Alignment.bottomRight,
+);
+
 //!!!OTHER!!!///
 
 const Color primaryColor = Color(0xFFE5044B);
