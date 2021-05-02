@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:necter_web/constants/app_colors.dart';
 import 'package:necter_web/constants/text_styles.dart';
+import 'package:necter_web/utils/global_func.dart';
 
 final double kTextPaddingNavBar = 18;
 
 class NavigationBar extends StatelessWidget {
-  const NavigationBar({Key key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -26,7 +25,9 @@ class NavigationBar extends StatelessWidget {
                 },
                 child: Text(
                   "Coming in June 2021",
-                  style: kNavBarTextStyle,
+                  style: kNavBarTextStyle.copyWith(
+                    fontSize: isMobile(context) ? 14 : 18,
+                  ),
                 ),
               ),
             ],
@@ -42,7 +43,9 @@ class NavigationBar extends StatelessWidget {
                   padding: EdgeInsets.only(left: kTextPaddingNavBar),
                   child: Text(
                     'FAQ',
-                    style: kNavBarTextStyle,
+                    style: kNavBarTextStyle.copyWith(
+                      fontSize: isMobile(context) ? 14 : 18,
+                    ),
                   ),
                 ),
               ),
@@ -54,7 +57,9 @@ class NavigationBar extends StatelessWidget {
                   padding: EdgeInsets.only(left: kTextPaddingNavBar),
                   child: Text(
                     'CONTACT',
-                    style: kNavBarTextStyle,
+                    style: kNavBarTextStyle.copyWith(
+                      fontSize: isMobile(context) ? 14 : 18,
+                    ),
                   ),
                 ),
               ),
@@ -66,7 +71,9 @@ class NavigationBar extends StatelessWidget {
                   padding: EdgeInsets.only(left: kTextPaddingNavBar),
                   child: Text(
                     'DOWNLOAD',
-                    style: kNavBarTextStyle,
+                    style: kNavBarTextStyle.copyWith(
+                      fontSize: isMobile(context) ? 14 : 18,
+                    ),
                   ),
                 ),
               ),

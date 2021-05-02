@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:necter_web/constants/app_colors.dart';
 import 'package:necter_web/constants/constant_styles.dart';
 

@@ -2,17 +2,21 @@ import 'package:conditional_builder/conditional_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:native_pdf_renderer/native_pdf_renderer.dart';
+import 'package:necter_web/components/footer/footer.dart';
+import 'package:necter_web/components/navigation_bar/navigation_bar.dart';
+import 'package:necter_web/constants/app_colors.dart';
 
-class LegalDocumentView extends StatefulWidget {
+class TermsAndConditions extends StatefulWidget {
   final String docPath;
-  const LegalDocumentView(this.docPath);
+  const TermsAndConditions({Key key, this.docPath}) : super(key: key);
 
   @override
-  _LegalDocumentViewState createState() => _LegalDocumentViewState();
+  _TermsAndConditionsState createState() => _TermsAndConditionsState();
 }
 
-class _LegalDocumentViewState extends State<LegalDocumentView> {
+class _TermsAndConditionsState extends State<TermsAndConditions> {
   PdfDocument document;
   PdfPage page;
   PdfPageImage pageImage;
@@ -59,8 +63,10 @@ class _LegalDocumentViewState extends State<LegalDocumentView> {
         EasyLoading.showError(e.toString());
       }
     } else {
-      EasyLoading.showToast('You have reached the end of the document.',
-          toastPosition: EasyLoadingToastPosition.bottom);
+      EasyLoading.showToast(
+        'You have reached the end of the document.',
+        toastPosition: EasyLoadingToastPosition.bottom,
+      );
     }
   }
 
@@ -89,62 +95,59 @@ class _LegalDocumentViewState extends State<LegalDocumentView> {
 
   @override
   Widget build(BuildContext context) {
+    Size _size = MediaQuery.of(context).size;
     return Scaffold(
-      body: SafeArea(
-        child: LayoutBuilder(builder: (context, constraints) {
-          return Container(
-            width: constraints.maxWidth,
-            height: constraints.maxHeight,
-            child: Stack(
-              children: [
-                ConditionalBuilder(
-                  condition: isLoaded,
-                  builder: (context) {
-                    return Positioned.fill(
-                      child: Image(
-                        height: constraints.maxHeight,
-                        image: MemoryImage(pageImage.bytes),
-                      ),
-                    );
-                  },
-                  fallback: (context) {
-                    return Center(
-                      child: CircularProgressIndicator(),
-                    );
-                  },
-                ),
-                Positioned(
-                  top: 25.0,
-                  left: 25.0,
-                  child: TextButton(
-                    onPressed: () => Navigator.pop(context),
-                    child: Text('Return to Home'),
-                  ),
-                ),
-                Positioned(
-                  bottom: 60,
-                  right: 60,
-                  child: TextButton(
-                    child: Text('Next Page'),
-                    onPressed: () {
-                      _loadNextPage();
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            NavigationBar(),
+            SizedBox(
+              width: _size.width,
+              height: _size.height,
+              child: Stack(
+                children: [
+                  ConditionalBuilder(
+                    condition: isLoaded,
+                    builder: (context) {
+                      return Positioned.fill(
+                        child: Image(
+                          height: _size.height,
+                          image: MemoryImage(pageImage.bytes),
+                        ),
+                      );
+                    },
+                    fallback: (context) {
+                      return Center(
+                        child: CircularProgressIndicator(),
+                      );
                     },
                   ),
-                ),
-                Positioned(
-                  bottom: 60,
-                  left: 60,
-                  child: TextButton(
-                    child: Text('Previous Page'),
-                    onPressed: () {
-                      _loadPrevPage();
-                    },
+                  Positioned(
+                    bottom: 60,
+                    right: 60,
+                    child: TextButton(
+                      child: Text('Next Page'),
+                      onPressed: () {
+                        _loadNextPage();
+                      },
+                    ),
                   ),
-                ),
-              ],
+                  Positioned(
+                    bottom: 60,
+                    left: 60,
+                    child: TextButton(
+                      child: Text('Previous Page'),
+                      onPressed: () {
+                        _loadPrevPage();
+                      },
+                    ),
+                  ),
+                ],
+              ),
             ),
-          );
-        }),
+            Footer(),
+          ],
+        ),
       ),
     );
   }

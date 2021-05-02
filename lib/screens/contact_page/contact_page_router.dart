@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:necter_web/constants/app_colors.dart';
 import 'package:necter_web/screens/contact_page/contact_page_desktop.dart';
+import 'package:necter_web/screens/contact_page/contact_page_mobile.dart';
 import 'package:necter_web/utils/responsive.dart';
 
 class ContactPageRouter extends StatelessWidget {
@@ -13,9 +14,7 @@ class ContactPageRouter extends StatelessWidget {
       body: Responsive(
         desktop: ContactPageDesktop(),
         tablet: ContactPageDesktop(),
-        mobile: Container(
-          color: Colors.blue,
-        ),
+        mobile: ContactPageMobile(),
       ),
     );
   }

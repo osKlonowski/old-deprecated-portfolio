@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:necter_web/constants/app_colors.dart';
 import 'package:necter_web/screens/contact_page/contact_page_router.dart';
 import 'package:necter_web/screens/faq_page/faq_page_router.dart';
 import 'package:necter_web/screens/home_page/home_page_router.dart';
-import 'package:necter_web/views/contact_view.dart';
-import 'package:necter_web/views/home_view.dart';
+import 'package:necter_web/screens/legal/privacy_policy.dart';
+import 'package:necter_web/screens/legal/terms_and_conditions.dart';
 import 'package:necter_web/views/legal/imprint_view.dart';
-import 'package:necter_web/views/legal/legal_document_view.dart';
-import 'package:splashscreen/splashscreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -31,9 +27,9 @@ class MyApp extends StatelessWidget {
         '/contact': (context) => ContactPageRouter(),
         '/faq': (context) => FAQPageRouter(),
         '/terms-and-conditions': (context) =>
-            LegalDocumentView('assets/terms_and_conditions.pdf'),
+            TermsAndConditions(docPath: 'assets/terms_and_conditions.pdf'),
         '/privacy-policy': (context) =>
-            LegalDocumentView('assets/privacy_policy.pdf'),
+            PrivacyPolicy(docPath: 'assets/privacy_policy.pdf'),
         '/imprint': (context) => Imprint(),
       },
     );
