@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:necter_web/constants/app_colors.dart';
 import 'package:necter_web/constants/text_styles.dart';
+// ignore: avoid_web_libraries_in_flutter
 import 'dart:html' as html;
+
+import 'package:necter_web/utils/global_func.dart';
 
 class Footer extends StatelessWidget {
   const Footer({Key key});
 
   @override
   Widget build(BuildContext context) {
-    Size _size = MediaQuery.of(context).size;
+    // Size _size = MediaQuery.of(context).size;
     return Container(
       padding: const EdgeInsets.all(26.0),
       color: red,
@@ -62,13 +65,23 @@ class Footer extends StatelessWidget {
                       'COMPANY',
                       style: kFooterSectionTitleTextStyle,
                     ),
-                    Text(
-                      'Privacy Policy',
-                      style: kFooterLinkTextStyle,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/privacy-policy');
+                      },
+                      child: Text(
+                        'Privacy Policy',
+                        style: kFooterLinkTextStyle,
+                      ),
                     ),
-                    Text(
-                      'Terms of Service',
-                      style: kFooterLinkTextStyle,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/terms-and-conditions');
+                      },
+                      child: Text(
+                        'Terms of Service',
+                        style: kFooterLinkTextStyle,
+                      ),
                     ),
                     GestureDetector(
                       onTap: () {
@@ -119,8 +132,10 @@ class Footer extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        html.window.open('https://www.instagram.com/necter/',
-                            'Necter-Instagram');
+                        html.window.open(
+                          'https://www.instagram.com/necter/',
+                          'Necter-Instagram',
+                        );
                       },
                       child: Text(
                         'Instagram',
@@ -129,20 +144,17 @@ class Footer extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        //TODO: FIX-LINK URL
+                        //TODO: FIX-LINK URL???
                         html.window.open(
-                            'https://www.facebook.com/Necter-110394790575070',
-                            'Necter-Facebook');
+                          'https://www.facebook.com/Necter-110394790575070',
+                          'Necter-Facebook',
+                        );
                       },
                       child: Text(
                         'Facebook',
                         style: kFooterLinkTextStyle,
                       ),
                     ),
-                    // Text(
-                    //   'Blog',
-                    //   style: kFooterLinkTextStyle,
-                    // ),
                   ],
                 ),
               ],
@@ -155,9 +167,11 @@ class Footer extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
-                  '© Copyright TUNED BKT UG (haftungsbestrankt) 2021 - All Rights Reserved',
+                  '© Copyright TUNED BKT UG 2021 - All Rights Reserved',
                   textAlign: TextAlign.left,
-                  style: kFooterLinkTextStyle,
+                  style: kFooterLinkTextStyle.copyWith(
+                    fontSize: isMobile(context) ? 11 : 14,
+                  ),
                 ),
               ],
             ),
