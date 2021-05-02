@@ -13,7 +13,10 @@ class NavigationBar extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: verticalRedNavBarGradient,
       ),
-      padding: EdgeInsets.symmetric(horizontal: 45, vertical: 30),
+      padding: EdgeInsets.symmetric(
+        horizontal: isMobile(context) ? 20 : 45,
+        vertical: isMobile(context) ? 22 : 30,
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
@@ -24,9 +27,9 @@ class NavigationBar extends StatelessWidget {
                   Navigator.pushNamed(context, '/');
                 },
                 child: Text(
-                  "Coming in June 2021",
+                  isMobile(context) ? "Coming Soon" : "Coming in June 2021",
                   style: kNavBarTextStyle.copyWith(
-                    fontSize: isMobile(context) ? 14 : 18,
+                    fontSize: isMobile(context) ? 12 : 18,
                   ),
                 ),
               ),
@@ -44,7 +47,7 @@ class NavigationBar extends StatelessWidget {
                   child: Text(
                     'FAQ',
                     style: kNavBarTextStyle.copyWith(
-                      fontSize: isMobile(context) ? 14 : 18,
+                      fontSize: isMobile(context) ? 12 : 18,
                     ),
                   ),
                 ),
@@ -58,25 +61,25 @@ class NavigationBar extends StatelessWidget {
                   child: Text(
                     'CONTACT',
                     style: kNavBarTextStyle.copyWith(
-                      fontSize: isMobile(context) ? 14 : 18,
+                      fontSize: isMobile(context) ? 12 : 18,
                     ),
                   ),
                 ),
               ),
-              GestureDetector(
-                onTap: () {
-                  EasyLoading.showInfo('Available in June 2021');
-                },
-                child: Padding(
-                  padding: EdgeInsets.only(left: kTextPaddingNavBar),
-                  child: Text(
-                    'DOWNLOAD',
-                    style: kNavBarTextStyle.copyWith(
-                      fontSize: isMobile(context) ? 14 : 18,
-                    ),
-                  ),
-                ),
-              ),
+              // GestureDetector(
+              //   onTap: () {
+              //     EasyLoading.showInfo('Available in June 2021');
+              //   },
+              //   child: Padding(
+              //     padding: EdgeInsets.only(left: kTextPaddingNavBar),
+              //     child: Text(
+              //       'DOWNLOAD',
+              //       style: kNavBarTextStyle.copyWith(
+              //         fontSize: isMobile(context) ? 14 : 18,
+              //       ),
+              //     ),
+              //   ),
+              // ),
             ],
           )
         ],

@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:necter_web/constants/app_colors.dart';
@@ -16,11 +17,14 @@ class BeThere05Mobile extends StatelessWidget {
             padding: gridItemMainPadding,
             color: orange,
             child: Center(
-              child: Text(
+              child: AutoSizeText(
                 'BE SPONTANEOUS\nBE THERE\nBE YOU',
                 textAlign: TextAlign.left,
+                stepGranularity: 2,
+                minFontSize: 20.0,
+                maxFontSize: 45.0,
                 style: GoogleFonts.poppins(
-                  fontSize: 50.0,
+                  fontSize: 40.0,
                   fontWeight: FontWeight.w700,
                   color: Colors.white,
                 ),

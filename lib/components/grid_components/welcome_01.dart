@@ -42,9 +42,10 @@ class Welcome01 extends StatelessWidget {
                         24,
                         22,
                         20,
-                        18
+                        18,
+                        16
                       ],
-                      minFontSize: 18,
+                      minFontSize: 16,
                       maxFontSize: 45,
                       style: GoogleFonts.poppins(
                         fontSize: 40,
@@ -53,57 +54,57 @@ class Welcome01 extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 12),
-                    GestureDetector(
-                      onTap: () {
-                        print('Pressed...');
-                      },
-                      child: Container(
-                        decoration:
-                            BoxDecoration(color: red, boxShadow: <BoxShadow>[
-                          BoxShadow(
-                            offset: Offset(1, 1),
-                            color: Colors.black.withOpacity(0.1),
-                            blurRadius: 10,
-                            spreadRadius: 1,
-                          ),
-                        ]),
-                        padding: const EdgeInsets.all(8.0),
-                        child: IntrinsicHeight(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: <Widget>[
-                              Text(
-                                'Get Early Access',
-                                style: GoogleFonts.poppins(
-                                  fontSize: 18.0,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Flexible(
-                                child: VerticalDivider(
-                                  width: 1,
-                                  thickness: 1.0,
-                                  indent: 4,
-                                  endIndent: 4,
-                                  color: Colors.white60,
-                                ),
-                              ),
-                              Icon(
-                                FontAwesomeIcons.arrowRight,
-                                color: Colors.white,
-                                size: 18.0,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
+                    // GestureDetector(
+                    //   onTap: () {
+                    //     print('Pressed...');
+                    //   },
+                    //   child: Container(
+                    //     decoration:
+                    //         BoxDecoration(color: red, boxShadow: <BoxShadow>[
+                    //       BoxShadow(
+                    //         offset: Offset(1, 1),
+                    //         color: Colors.black.withOpacity(0.1),
+                    //         blurRadius: 10,
+                    //         spreadRadius: 1,
+                    //       ),
+                    //     ]),
+                    //     padding: const EdgeInsets.all(8.0),
+                    //     child: IntrinsicHeight(
+                    //       child: Row(
+                    //         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    //         children: <Widget>[
+                    //           Text(
+                    //             'Get Early Access',
+                    //             style: GoogleFonts.poppins(
+                    //               fontSize: 18.0,
+                    //               fontWeight: FontWeight.w500,
+                    //               color: Colors.white,
+                    //             ),
+                    //           ),
+                    //           Flexible(
+                    //             child: VerticalDivider(
+                    //               width: 1,
+                    //               thickness: 1.0,
+                    //               indent: 4,
+                    //               endIndent: 4,
+                    //               color: Colors.white60,
+                    //             ),
+                    //           ),
+                    //           Icon(
+                    //             FontAwesomeIcons.arrowRight,
+                    //             color: Colors.white,
+                    //             size: 18.0,
+                    //           ),
+                    //         ],
+                    //       ),
+                    //     ),
+                    //   ),
+                    // ),
                     Padding(
                       padding: const EdgeInsets.only(top: 8.0),
                       child: AutoSizeText(
                         'Be part of the first 10,000 and get 3 months of Necter GO for free!',
-                        minFontSize: 10,
+                        minFontSize: 8,
                         maxFontSize: 14,
                         stepGranularity: 1,
                         style: GoogleFonts.poppins(
