@@ -21,7 +21,7 @@ List<Widget> _gridElements = <Widget>[
   OldSchool06(),
 ];
 
-List<Widget> _mobileGridElements = <Widget>[
+List<Widget> _mobileListElements = <Widget>[
   Welcome01(),
   SignUp02Mobile(),
   MockUp03(),
@@ -40,7 +40,7 @@ class HomePageRouter extends StatelessWidget {
       body: Responsive(
         desktop: HomePageDesktop(_gridElements),
         tablet: HomePageDesktop(_gridElements),
-        mobile: HomePageMobile(_mobileGridElements),
+        mobile: HomePageMobile(_mobileListElements),
       ),
     );
   }
