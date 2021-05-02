@@ -6,7 +6,6 @@ import 'package:necter_web/screens/home_page/home_page_router.dart';
 import 'package:necter_web/screens/legal/privacy_policy.dart';
 import 'package:necter_web/screens/legal/terms_and_conditions.dart';
 import 'package:necter_web/views/legal/imprint_view.dart';
-import 'package:necter_web/views/legal/legal_document_view.dart';
 
 void main() {
   runApp(MyApp());

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:necter_web/utils/responsiveLayout.dart';
-import 'package:necter_web/widgets/navbar.dart';
 
 class ContactView extends StatelessWidget {
   @override
@@ -16,7 +15,6 @@ class ContactView extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              NavBar(isStyleWhite: true),
               Body(),
             ],
           ),
