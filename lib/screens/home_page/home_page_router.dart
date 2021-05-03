@@ -39,7 +39,7 @@ class HomePageRouter extends StatelessWidget {
       backgroundColor: red,
       body: Responsive(
         desktop: HomePageDesktop(_gridElements),
-        tablet: HomePageDesktop(_gridElements),
+        tablet: HomePageDesktop(_mobileListElements),
         mobile: HomePageMobile(_mobileListElements),
       ),
     );

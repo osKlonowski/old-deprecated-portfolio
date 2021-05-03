@@ -29,8 +29,8 @@ class _SignUp02State extends State<SignUp02> {
             color: red,
             child: Center(
               child: SizedBox(
-                width: constraints.maxWidth * 0.5,
-                height: constraints.maxHeight * 0.5,
+                width: constraints.maxWidth * 0.65,
+                height: constraints.maxHeight * 0.65,
                 child: Container(
                   padding: const EdgeInsets.all(12.0),
                   color: Colors.white,
@@ -52,7 +52,7 @@ class _SignUp02State extends State<SignUp02> {
                           ),
                         ),
                         SizedBox(
-                          width: constraints.maxWidth * 0.35,
+                          width: constraints.maxWidth * 0.5,
                           child: Container(
                             padding: const EdgeInsets.symmetric(
                               horizontal: 14.0,
@@ -108,7 +108,7 @@ class _SignUp02State extends State<SignUp02> {
                           ),
                         ),
                         SizedBox(
-                          width: constraints.maxWidth * 0.35,
+                          width: constraints.maxWidth * 0.5,
                           child: Container(
                             padding: const EdgeInsets.symmetric(
                               horizontal: 14.0,
@@ -163,11 +163,19 @@ class _SignUp02State extends State<SignUp02> {
                           ),
                         ),
                         AutoSizeText(
-                          'By clicking submit you agree to our Terms and Conditions and our Privacy Policy.',
+                          'By clicking \'Get Notified\' you agree to our Terms and Conditions and our Privacy Policy.',
                           textAlign: TextAlign.center,
                           minFontSize: 10.0,
                           maxFontSize: 14.0,
                           stepGranularity: 1,
+                          overflowReplacement: Text(
+                            'Terms and Conditions, Privacy Policy',
+                            style: GoogleFonts.poppins(
+                              fontSize: 10.0,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.grey[700],
+                            ),
+                          ),
                           style: GoogleFonts.poppins(
                             fontSize: 12.0,
                             fontWeight: FontWeight.w400,
@@ -210,7 +218,7 @@ class _SignUp02State extends State<SignUp02> {
                               borderRadius: BorderRadius.circular(25.0),
                             ),
                             child: Text(
-                              'Get Access',
+                              'Get Notified',
                               style: GoogleFonts.poppins(
                                 fontSize: 14.0,
                                 fontWeight: FontWeight.w600,
@@ -228,7 +236,7 @@ class _SignUp02State extends State<SignUp02> {
                           overflowReplacement: Text(
                             'You will be notified once Necter is available for download.',
                             style: GoogleFonts.poppins(
-                              fontSize: 10.0,
+                              fontSize: 8.0,
                               fontWeight: FontWeight.w500,
                               color: Colors.grey[500],
                             ),
