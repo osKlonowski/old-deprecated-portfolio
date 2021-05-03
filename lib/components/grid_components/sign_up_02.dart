@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:necter_web/constants/app_colors.dart';
 import 'package:necter_web/constants/constant_styles.dart';
+import 'package:necter_web/utils/database.dart';
 
 class SignUp02 extends StatefulWidget {
   const SignUp02({Key key}) : super(key: key);
@@ -89,11 +90,11 @@ class _SignUp02State extends State<SignUp02> {
                                       hintText: 'Name',
                                     ),
                                     validator: (value) {
-                                      //TODO: Check RegEx Expression for Name format
                                       if (value == null ||
                                           value.isEmpty ||
-                                          value.contains(RegExp(r'[0-9]'))) {
-                                        return 'Please enter a valid name';
+                                          !value.contains(
+                                              RegExp('([a-zA-Z]{3,30}\s*)+'))) {
+                                        return 'Enter a valid first name';
                                       }
                                       return null;
                                     },
@@ -145,11 +146,11 @@ class _SignUp02State extends State<SignUp02> {
                                     hintText: 'Email Address',
                                   ),
                                   validator: (value) {
-                                    //TODO: Check RegEx Expression for Email format
                                     if (value == null ||
                                         value.isEmpty ||
-                                        value.contains(RegExp(r'[0-9]'))) {
-                                      return 'Please enter a valid name';
+                                        !value.contains(RegExp(
+                                            r'(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)'))) {
+                                      return 'Enter a valid email address';
                                     }
                                     return null;
                                   },
@@ -179,10 +180,23 @@ class _SignUp02State extends State<SignUp02> {
                               // If the form is valid, display a snackbar. In the real world,
                               // you'd often call a server or save the information in a database.
                               _formKey.currentState.save();
-                              print(_nameController.value);
-                              print(_emailController.value);
+                              print(_nameController.value.text);
+                              print(_emailController.value.text);
+                              subscribeToEarlySignUp(_nameController.value.text,
+                                  _emailController.value.text);
                               ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(content: Text('Processing Data')));
+                                SnackBar(
+                                  backgroundColor: green,
+                                  content: Text(
+                                    'Thank you! You will be notified once Necter is released.',
+                                    style: GoogleFonts.poppins(
+                                      fontSize: 14.0,
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                ),
+                              );
                               _formKey.currentState.reset();
                             }
                           },
