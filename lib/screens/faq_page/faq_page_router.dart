@@ -14,9 +14,7 @@ class FAQPageRouter extends StatelessWidget {
       body: Responsive(
         desktop: FAQPageDesktop(),
         tablet: FAQPageDesktop(),
-        mobile: Container(
-          color: Colors.blue,
-        ),
+        mobile: FAQPageDesktop(),
       ),
     );
   }

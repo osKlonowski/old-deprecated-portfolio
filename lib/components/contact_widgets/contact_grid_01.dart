@@ -54,7 +54,7 @@ class ContactGrid1 extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(top: 8.0),
                       child: Text(
-                        'Hamburg, Germany',
+                        'Grootmoorgraben 4\n22175 Hamburg - Germany',
                         style: GoogleFonts.poppins(
                           fontSize: isMobile(context) ? 20 : 24.0,
                           fontWeight: FontWeight.w600,
@@ -65,7 +65,7 @@ class ContactGrid1 extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(top: 8.0),
                       child: Text(
-                        'NECTER',
+                        'Geschäftsführer: Joshua Buse\nAmtsgericht Hamburg\nRegister-Nummer: HRB 155122',
                         style: GoogleFonts.poppins(
                           fontSize: isMobile(context) ? 20 : 24.0,
                           fontWeight: FontWeight.w600,

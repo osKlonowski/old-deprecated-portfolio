@@ -1,5 +1,11 @@
 # This is a generated file; do not edit or check into version control.
+cloud_firestore=/Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-1.0.7/
+cloud_firestore_web=/Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore_web-1.0.7/
+cloud_functions=/Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_functions-1.0.5/
+cloud_functions_web=/Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_functions_web-4.0.5/
 device_info=/Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/device_info-2.0.0/
+firebase_core=/Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-1.1.0/
+firebase_core_web=/Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-1.0.2/
 native_pdf_renderer=/Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/native_pdf_renderer-3.0.0/
 path_provider=/Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-2.0.1/
 path_provider_linux=/Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-2.0.0/

@@ -5,7 +5,6 @@ import 'package:necter_web/screens/faq_page/faq_page_router.dart';
 import 'package:necter_web/screens/home_page/home_page_router.dart';
 import 'package:necter_web/screens/legal/privacy_policy.dart';
 import 'package:necter_web/screens/legal/terms_and_conditions.dart';
-import 'package:necter_web/views/legal/imprint_view.dart';
 
 void main() {
   runApp(MyApp());
@@ -30,7 +29,7 @@ class MyApp extends StatelessWidget {
             TermsAndConditions(docPath: 'assets/terms_and_conditions.pdf'),
         '/privacy-policy': (context) =>
             PrivacyPolicy(docPath: 'assets/privacy_policy.pdf'),
-        '/imprint': (context) => Imprint(),
+        '/imprint': (context) => ContactPageRouter(),
       },
     );
   }
