@@ -23,9 +23,9 @@ class BeThere05 extends StatelessWidget {
                   : constraints.maxWidth * 0.6,
               child: AutoSizeText(
                 'BE SPONTANEOUS\nBE THERE\nBE YOU',
-                maxFontSize: 45,
+                maxFontSize: 44,
                 minFontSize: 28,
-                presetFontSizes: [45, 40, 38, 34, 30, 28],
+                stepGranularity: 1,
                 textAlign: TextAlign.left,
                 style: GoogleFonts.poppins(
                   fontSize: 50.0,

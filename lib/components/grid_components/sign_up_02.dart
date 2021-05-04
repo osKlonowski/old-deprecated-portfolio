@@ -1,4 +1,5 @@
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -162,24 +163,53 @@ class _SignUp02State extends State<SignUp02> {
                             ),
                           ),
                         ),
-                        AutoSizeText(
-                          'By clicking \'Get Notified\' you agree to our Terms and Conditions and our Privacy Policy.',
+                        RichText(
                           textAlign: TextAlign.center,
-                          minFontSize: 10.0,
-                          maxFontSize: 14.0,
-                          stepGranularity: 1,
-                          overflowReplacement: Text(
-                            'Terms and Conditions, Privacy Policy',
+                          text: TextSpan(
+                            text:
+                                'By clicking \'Get Notified\' you agree to our ',
                             style: GoogleFonts.poppins(
-                              fontSize: 10.0,
+                              fontSize: 12.0,
                               fontWeight: FontWeight.w400,
                               color: Colors.grey[700],
                             ),
-                          ),
-                          style: GoogleFonts.poppins(
-                            fontSize: 12.0,
-                            fontWeight: FontWeight.w400,
-                            color: Colors.grey[700],
+                            children: <TextSpan>[
+                              TextSpan(
+                                text: 'Terms and Conditions',
+                                style: GoogleFonts.poppins(
+                                  fontSize: 12.0,
+                                  fontWeight: FontWeight.w400,
+                                  color: Colors.blueGrey,
+                                  decoration: TextDecoration.underline,
+                                ),
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap = () {
+                                    Navigator.pushNamed(
+                                        context, '/terms-and-conditions');
+                                  },
+                              ),
+                              TextSpan(
+                                text: ' and ',
+                                style: GoogleFonts.poppins(
+                                    fontSize: 12.0,
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.blueGrey),
+                              ),
+                              TextSpan(
+                                text: 'Privacy Policy.',
+                                style: GoogleFonts.poppins(
+                                  fontSize: 12.0,
+                                  fontWeight: FontWeight.w400,
+                                  color: Colors.blueGrey,
+                                  decoration: TextDecoration.underline,
+                                ),
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap = () {
+                                    Navigator.pushNamed(
+                                        context, '/privacy-policy');
+                                  },
+                              ),
+                            ],
                           ),
                         ),
                         GestureDetector(
@@ -210,8 +240,8 @@ class _SignUp02State extends State<SignUp02> {
                           },
                           child: Container(
                             padding: const EdgeInsets.symmetric(
-                              horizontal: 18.0,
-                              vertical: 6.0,
+                              horizontal: 20.0,
+                              vertical: 8.0,
                             ),
                             decoration: BoxDecoration(
                               gradient: redBlueGradient,
@@ -220,7 +250,7 @@ class _SignUp02State extends State<SignUp02> {
                             child: Text(
                               'Get Notified',
                               style: GoogleFonts.poppins(
-                                fontSize: 14.0,
+                                fontSize: 16.0,
                                 fontWeight: FontWeight.w600,
                                 color: Colors.white,
                               ),
