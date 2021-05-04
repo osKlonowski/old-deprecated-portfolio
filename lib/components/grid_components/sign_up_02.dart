@@ -63,7 +63,7 @@ class _SignUp02State extends State<SignUp02> {
                           ),
                         ),
                         SizedBox(
-                          width: constraints.maxWidth * 0.5,
+                          width: (constraints.maxWidth * 0.65) / 1.618,
                           child: Container(
                             padding: const EdgeInsets.symmetric(
                               horizontal: 14.0,
@@ -119,7 +119,7 @@ class _SignUp02State extends State<SignUp02> {
                           ),
                         ),
                         SizedBox(
-                          width: constraints.maxWidth * 0.5,
+                          width: (constraints.maxWidth * 0.65) / 1.618,
                           child: Container(
                             padding: const EdgeInsets.symmetric(
                               horizontal: 14.0,
@@ -267,24 +267,31 @@ class _SignUp02State extends State<SignUp02> {
                             ),
                           ),
                         ),
-                        AutoSizeText(
-                          'You will be notified once Necter is available for download. Until then we won\'t bother you with any promotions. Promise.',
-                          textAlign: TextAlign.center,
-                          minFontSize: 8,
-                          maxFontSize: 12,
-                          stepGranularity: 1,
-                          overflowReplacement: Text(
-                            'You will be notified once Necter is available for download.',
+                        Padding(
+                          padding: const EdgeInsets.only(
+                            left: 12.0,
+                            right: 12.0,
+                            bottom: 4.0,
+                          ),
+                          child: AutoSizeText(
+                            'You will be notified once Necter is available for download. Until then we won\'t bother you with any promotions. Promise.',
+                            textAlign: TextAlign.center,
+                            minFontSize: 8,
+                            maxFontSize: 12,
+                            stepGranularity: 1,
+                            overflowReplacement: Text(
+                              'You will be notified once Necter is available for download.',
+                              style: GoogleFonts.poppins(
+                                fontSize: 8.0,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.grey[500],
+                              ),
+                            ),
                             style: GoogleFonts.poppins(
-                              fontSize: 8.0,
+                              fontSize: 10.0,
                               fontWeight: FontWeight.w500,
                               color: Colors.grey[500],
                             ),
-                          ),
-                          style: GoogleFonts.poppins(
-                            fontSize: 10.0,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.grey[500],
                           ),
                         ),
                       ],

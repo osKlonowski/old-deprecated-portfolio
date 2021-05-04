@@ -41,10 +41,10 @@ class Footer extends StatelessWidget {
                         style: kFooterLinkTextStyle,
                       ),
                     ),
-                    Text(
-                      'Guidelines',
-                      style: kFooterLinkTextStyle,
-                    ),
+                    // Text(
+                    //   'Guidelines',
+                    //   style: kFooterLinkTextStyle,
+                    // ),
                   ],
                 ),
                 SizedBox(width: 14),
