@@ -228,10 +228,10 @@ class _SignUp02State extends State<SignUp02> {
                               // If the form is valid, display a snackbar. In the real world,
                               // you'd often call a server or save the information in a database.
                               _formKey.currentState.save();
-                              print(_nameController.value.text);
-                              print(_emailController.value.text);
-                              subscribeToEarlySignUp(_nameController.value.text,
-                                  _emailController.value.text);
+                              final String name = _nameController.value.text;
+                              final String email = _emailController.value.text;
+                              print('$name + $email');
+                              subscribeToEarlySignUp(name, email);
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(
                                   backgroundColor: green,
