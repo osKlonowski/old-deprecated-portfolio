@@ -16,22 +16,13 @@ class BeThere05 extends StatelessWidget {
           return Container(
             padding: gridItemMainPadding,
             alignment: Alignment.center,
-            color: Colors.white,
+            color: Color.fromRGBO(251, 251, 251, 1.0),
             child: SizedBox(
-              width: isMobile(context)
-                  ? constraints.maxWidth * 0.8
-                  : constraints.maxWidth * 0.6,
-              child: AutoSizeText(
-                'BE SPONTANEOUS\nBE THERE\nBE YOU',
-                maxFontSize: 44,
-                minFontSize: 28,
-                stepGranularity: 1,
-                textAlign: TextAlign.left,
-                style: GoogleFonts.poppins(
-                  fontSize: 50.0,
-                  fontWeight: FontWeight.w700,
-                  color: Colors.black,
-                ),
+              width: constraints.maxWidth / 1.618,
+              height: constraints.maxHeight / 1.618,
+              child: Image.asset(
+                'assets/animations/be_there.gif',
+                fit: BoxFit.fitWidth,
               ),
             ),
           );

@@ -60,6 +60,7 @@ flutter:
     - assets/logo_white.png
     - assets/privacy_policy.pdf
     - assets/terms_and_conditions.pdf
+    - assets/animations/be_there.gif
     - assets/animations/wing_app.gif
     - assets/animations/wing_app_neon.gif
     - assets/animations/wing_app_neon2.gif
