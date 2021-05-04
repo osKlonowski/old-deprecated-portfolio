@@ -16,14 +16,15 @@ class Welcome01 extends StatelessWidget {
       child: LayoutBuilder(
         builder: (BuildContext ctx, BoxConstraints constraints) {
           return Container(
-            color: Color.fromRGBO(251, 251, 251, 1.0),
+            // color: Color.fromRGBO(251, 251, 251, 1.0),
+            color: Colors.black,
             padding: gridItemMainPadding,
             child: Center(
               child: SizedBox(
                 width: constraints.maxWidth / 1.618,
                 height: constraints.maxHeight / 1.618,
                 child: Image.asset(
-                  'assets/animations/wing_app.gif',
+                  'assets/animations/wing_app_neon.gif',
                   fit: BoxFit.fitWidth,
                 ),
               ),

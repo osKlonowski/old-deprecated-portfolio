@@ -61,6 +61,8 @@ flutter:
     - assets/privacy_policy.pdf
     - assets/terms_and_conditions.pdf
     - assets/animations/wing_app.gif
+    - assets/animations/wing_app_neon.gif
+    - assets/animations/wing_app_neon2.gif
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
