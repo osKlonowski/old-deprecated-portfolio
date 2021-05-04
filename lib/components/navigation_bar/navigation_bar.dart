@@ -15,13 +15,27 @@ class NavigationBar extends StatelessWidget {
       ),
       padding: EdgeInsets.symmetric(
         horizontal: isMobile(context) ? 20 : 45,
-        vertical: isMobile(context) ? 22 : 30,
+        vertical: isMobile(context) ? 22 : 28,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Row(
             children: <Widget>[
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/');
+                },
+                child: Text(
+                  'NECTER',
+                  style: kNavBarTextStyle.copyWith(
+                    fontSize: isMobile(context) ? 13 : 19,
+                  ),
+                ),
+              ),
+              SizedBox(
+                width: 12,
+              ),
               GestureDetector(
                 onTap: () {
                   Navigator.pushNamed(context, '/');
