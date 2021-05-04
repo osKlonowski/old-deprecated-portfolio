@@ -34,7 +34,17 @@ class _SignUp02State extends State<SignUp02> {
                 height: constraints.maxHeight * 0.65,
                 child: Container(
                   padding: const EdgeInsets.all(12.0),
-                  color: Colors.white,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    boxShadow: <BoxShadow>[
+                      BoxShadow(
+                        offset: Offset(1, 1),
+                        color: Colors.black26,
+                        spreadRadius: 2,
+                        blurRadius: 15,
+                      ),
+                    ],
+                  ),
                   child: Form(
                     key: _formKey,
                     child: Column(
