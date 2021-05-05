@@ -20,7 +20,6 @@ class _SignUp02MobileState extends State<SignUp02Mobile> {
   final _formKey = GlobalKey<FormState>();
 
   final TextEditingController _emailController = TextEditingController();
-
   final TextEditingController _nameController = TextEditingController();
 
   bool _loading = false;

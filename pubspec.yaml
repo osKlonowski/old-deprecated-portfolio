@@ -62,6 +62,8 @@ flutter:
     - assets/terms_and_conditions.pdf
     - assets/animations/be_there.gif
     - assets/animations/wing_app.gif
+    - assets/animations/old_school.png
+    - assets/animations/say_hi.png
     - assets/animations/wing_app_neon.gif
     - assets/animations/wing_app_neon2.gif
 

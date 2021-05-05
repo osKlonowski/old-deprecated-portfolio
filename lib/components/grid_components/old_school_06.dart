@@ -14,52 +14,73 @@ class OldSchool06 extends StatelessWidget {
       child: LayoutBuilder(
         builder: (BuildContext ctx, BoxConstraints constraints) {
           return Container(
-            padding: gridItemMainPadding,
             color: green,
-            alignment: Alignment.center,
-            child: SizedBox(
-              width: constraints.maxWidth / 1.618,
-              height: constraints.maxWidth / 1.618,
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.end,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Flexible(
-                    child: AutoSizeText(
-                      'OLD SCHOOL DATING\n',
-                      maxFontSize: 45,
-                      minFontSize: 28,
-                      presetFontSizes: [45, 40, 38, 34, 30, 28],
-                      textAlign: TextAlign.right,
-                      style: GoogleFonts.pressStart2p(
-                        fontSize: 33.0,
-                        fontWeight: FontWeight.w700,
-                        color: Colors.white,
-                        letterSpacing: 0.8,
-                      ),
-                    ),
-                  ),
-                  Flexible(
-                    child: AutoSizeText(
-                      'NEW SCHOOL TECH',
-                      maxFontSize: 45,
-                      minFontSize: 28,
-                      presetFontSizes: [45, 40, 38, 34, 30, 28],
-                      textAlign: TextAlign.right,
-                      style: GoogleFonts.poppins(
-                        fontSize: 50.0,
-                        fontWeight: FontWeight.w700,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ],
+            padding: gridItemMainPadding,
+            child: Center(
+              child: SizedBox(
+                width: constraints.maxWidth / 1.618,
+                height: constraints.maxHeight / 1.618,
+                child: Image.asset(
+                  'assets/animations/old_school.png',
+                  fit: BoxFit.fitWidth,
+                ),
               ),
             ),
           );
         },
       ),
     );
+    // return AspectRatio(
+    //   aspectRatio: 1 / 1,
+    //   child: LayoutBuilder(
+    //     builder: (BuildContext ctx, BoxConstraints constraints) {
+    //       return Container(
+    //         padding: gridItemMainPadding,
+    //         color: green,
+    //         alignment: Alignment.center,
+    //         child: SizedBox(
+    //           width: constraints.maxWidth / 1.618,
+    //           height: constraints.maxWidth / 1.618,
+    //           child: Column(
+    //             mainAxisSize: MainAxisSize.min,
+    //             crossAxisAlignment: CrossAxisAlignment.end,
+    //             mainAxisAlignment: MainAxisAlignment.center,
+    //             children: <Widget>[
+    //               Flexible(
+    //                 child: AutoSizeText(
+    //                   'OLD SCHOOL DATING\n',
+    //                   maxFontSize: 45,
+    //                   minFontSize: 28,
+    //                   presetFontSizes: [45, 40, 38, 34, 30, 28],
+    //                   textAlign: TextAlign.right,
+    //                   style: GoogleFonts.pressStart2p(
+    //                     fontSize: 33.0,
+    //                     fontWeight: FontWeight.w700,
+    //                     color: Colors.white,
+    //                     letterSpacing: 0.8,
+    //                   ),
+    //                 ),
+    //               ),
+    //               Flexible(
+    //                 child: AutoSizeText(
+    //                   'NEW SCHOOL TECH',
+    //                   maxFontSize: 45,
+    //                   minFontSize: 28,
+    //                   presetFontSizes: [45, 40, 38, 34, 30, 28],
+    //                   textAlign: TextAlign.right,
+    //                   style: GoogleFonts.raleway(
+    //                     fontSize: 50.0,
+    //                     fontWeight: FontWeight.w700,
+    //                     color: Colors.white,
+    //                   ),
+    //                 ),
+    //               ),
+    //             ],
+    //           ),
+    //         ),
+    //       );
+    //     },
+    //   ),
+    // );
   }
 }
