@@ -102,7 +102,7 @@ class _SignUp02State extends State<SignUp02> {
                                     controller: _nameController,
                                     decoration: InputDecoration(
                                       border: InputBorder.none,
-                                      hintText: 'Name',
+                                      hintText: 'First Name',
                                     ),
                                     validator: (value) {
                                       if (value == null ||
