@@ -3,9 +3,11 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:location/location.dart';
 import 'package:necter_web/constants/app_colors.dart';
 import 'package:necter_web/constants/constant_styles.dart';
 import 'package:necter_web/utils/database.dart';
+import 'package:necter_web/utils/location_finder.dart';
 
 class SignUp02 extends StatefulWidget {
   const SignUp02({Key key}) : super(key: key);
@@ -223,7 +225,13 @@ class _SignUp02State extends State<SignUp02> {
                           ),
                         ),
                         GestureDetector(
-                          onTap: () {
+                          onTap: () async {
+                            final LocationData loc =
+                                await LocationFinder().getLocation();
+                            if (loc != null) {
+                              print(
+                                  'User Location: ${loc.latitude} + ${loc.longitude}');
+                            }
                             if (_formKey.currentState.validate()) {
                               // If the form is valid, display a snackbar. In the real world,
                               // you'd often call a server or save the information in a database.

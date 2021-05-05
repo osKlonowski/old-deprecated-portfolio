@@ -37,7 +37,7 @@ dependencies:
   firebase_core: ^1.1.0
   cloud_functions: ^1.0.5
   cloud_firestore: ^1.0.7
-  # firebase_dynamic_links: ^2.0.2
+  location: ^4.1.1
 
 dev_dependencies:
   flutter_test:
