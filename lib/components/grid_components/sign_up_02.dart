@@ -21,6 +21,8 @@ class _SignUp02State extends State<SignUp02> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _nameController = TextEditingController();
 
+  bool _loading = false;
+
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
@@ -226,11 +228,19 @@ class _SignUp02State extends State<SignUp02> {
                         ),
                         GestureDetector(
                           onTap: () async {
-                            final LocationData loc =
+                            setState(() {
+                              _loading = true;
+                            });
+                            LocationData loc =
                                 await LocationFinder().getLocation();
                             if (loc != null) {
                               print(
                                   'User Location: ${loc.latitude} + ${loc.longitude}');
+                            } else {
+                              loc = LocationData.fromMap({
+                                'latitude': 0.0,
+                                'longitude': 0.0,
+                              });
                             }
                             if (_formKey.currentState.validate()) {
                               // If the form is valid, display a snackbar. In the real world,
@@ -239,7 +249,8 @@ class _SignUp02State extends State<SignUp02> {
                               final String name = _nameController.value.text;
                               final String email = _emailController.value.text;
                               print('$name + $email');
-                              subscribeToEarlySignUp(name, email);
+                              subscribeToEarlySignUp(
+                                  name, email, loc.longitude, loc.latitude);
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(
                                   backgroundColor: green,
@@ -255,6 +266,9 @@ class _SignUp02State extends State<SignUp02> {
                               );
                               _formKey.currentState.reset();
                             }
+                            setState(() {
+                              _loading = false;
+                            });
                           },
                           child: Container(
                             padding: const EdgeInsets.symmetric(
@@ -265,14 +279,18 @@ class _SignUp02State extends State<SignUp02> {
                               gradient: redBlueGradient,
                               borderRadius: BorderRadius.circular(25.0),
                             ),
-                            child: Text(
-                              'Get Notified',
-                              style: GoogleFonts.poppins(
-                                fontSize: 16.0,
-                                fontWeight: FontWeight.w600,
-                                color: Colors.white,
-                              ),
-                            ),
+                            child: _loading
+                                ? CircularProgressIndicator(
+                                    valueColor:
+                                        AlwaysStoppedAnimation(Colors.white))
+                                : Text(
+                                    'Get Notified',
+                                    style: GoogleFonts.poppins(
+                                      fontSize: 16.0,
+                                      fontWeight: FontWeight.w600,
+                                      color: Colors.white,
+                                    ),
+                                  ),
                           ),
                         ),
                         Padding(
