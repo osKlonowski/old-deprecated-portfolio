@@ -231,11 +231,11 @@ class _SignUp02State extends State<SignUp02> {
                             setState(() {
                               _loading = true;
                             });
-                            final LocationData loc = await LocationFinder()
-                                .getLocation()
-                                .timeout(Duration(seconds: 4),
-                                    onTimeout: () => null);
                             if (_formKey.currentState.validate()) {
+                              final LocationData loc = await LocationFinder()
+                                  .getLocation()
+                                  .timeout(Duration(seconds: 4),
+                                      onTimeout: () => null);
                               // If the form is valid, display a snackbar. In the real world,
                               // you'd often call a server or save the information in a database.
                               _formKey.currentState.save();
@@ -261,11 +261,11 @@ class _SignUp02State extends State<SignUp02> {
                                   ),
                                 ),
                               );
-                              _formKey.currentState.reset();
                             }
                             setState(() {
                               _loading = false;
                             });
+                            _formKey.currentState.reset();
                           },
                           child: Container(
                             padding: const EdgeInsets.symmetric(

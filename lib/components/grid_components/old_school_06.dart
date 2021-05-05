@@ -16,7 +16,10 @@ class OldSchool06 extends StatelessWidget {
           return Container(
             padding: gridItemMainPadding,
             color: green,
-            child: Center(
+            alignment: Alignment.center,
+            child: SizedBox(
+              width: constraints.maxWidth / 1.618,
+              height: constraints.maxWidth / 1.618,
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.end,
