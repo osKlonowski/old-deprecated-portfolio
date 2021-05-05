@@ -280,9 +280,15 @@ class _SignUp02State extends State<SignUp02> {
                               borderRadius: BorderRadius.circular(25.0),
                             ),
                             child: _loading
-                                ? CircularProgressIndicator(
-                                    valueColor:
-                                        AlwaysStoppedAnimation(Colors.white))
+                                ? SizedBox(
+                                    width: 20,
+                                    height: 20,
+                                    child: CircularProgressIndicator(
+                                      strokeWidth: 3,
+                                      valueColor:
+                                          AlwaysStoppedAnimation(Colors.white),
+                                    ),
+                                  )
                                 : Text(
                                     'Get Notified',
                                     style: GoogleFonts.poppins(
