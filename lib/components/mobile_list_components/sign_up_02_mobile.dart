@@ -216,17 +216,10 @@ class _SignUp02MobileState extends State<SignUp02Mobile> {
                             setState(() {
                               _loading = true;
                             });
-                            LocationData loc =
-                                await LocationFinder().getLocation();
-                            if (loc != null) {
-                              print(
-                                  'User Location: ${loc.latitude} + ${loc.longitude}');
-                            } else {
-                              loc = LocationData.fromMap({
-                                'latitude': 0.0,
-                                'longitude': 0.0,
-                              });
-                            }
+                            final LocationData loc = await LocationFinder()
+                                .getLocation()
+                                .timeout(Duration(seconds: 4),
+                                    onTimeout: () => null);
                             if (_formKey.currentState.validate()) {
                               // If the form is valid, display a snackbar. In the real world,
                               // you'd often call a server or save the information in a database.
@@ -234,8 +227,12 @@ class _SignUp02MobileState extends State<SignUp02Mobile> {
                               final String name = _nameController.value.text;
                               final String email = _emailController.value.text;
                               print('$name + $email');
-                              subscribeToEarlySignUp(
-                                  name, email, loc.longitude, loc.latitude);
+                              if (loc != null) {
+                                subscribeToEarlySignUp(name, email,
+                                    lng: loc.longitude, lat: loc.latitude);
+                              } else {
+                                subscribeToEarlySignUp(name, email);
+                              }
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(
                                   backgroundColor: green,
