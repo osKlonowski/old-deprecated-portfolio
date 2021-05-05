@@ -1,6 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:necter_web/constants/app_colors.dart';
 import 'package:necter_web/constants/constant_styles.dart';
 import 'package:necter_web/utils/global_func.dart';
 
@@ -16,7 +17,7 @@ class SayHi04 extends StatelessWidget {
           return Container(
             padding: gridItemMainPadding,
             alignment: Alignment.center,
-            color: Colors.white,
+            color: isMobile(context) ? orange : Colors.white,
             child: SizedBox(
               width: isMobile(context)
                   ? constraints.maxWidth * 0.8
@@ -30,7 +31,7 @@ class SayHi04 extends StatelessWidget {
                 style: GoogleFonts.poppins(
                   fontSize: 45.0,
                   fontWeight: FontWeight.w700,
-                  color: Colors.black,
+                  color: isMobile(context) ? Colors.white : Colors.black,
                 ),
               ),
             ),
