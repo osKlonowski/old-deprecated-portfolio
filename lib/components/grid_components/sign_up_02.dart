@@ -3,9 +3,11 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:location/location.dart';
 import 'package:necter_web/constants/app_colors.dart';
 import 'package:necter_web/constants/constant_styles.dart';
 import 'package:necter_web/utils/database.dart';
+import 'package:necter_web/utils/location_finder.dart';
 
 class SignUp02 extends StatefulWidget {
   const SignUp02({Key key}) : super(key: key);
@@ -18,6 +20,8 @@ class _SignUp02State extends State<SignUp02> {
   final _formKey = GlobalKey<FormState>();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _nameController = TextEditingController();
+
+  bool _loading = false;
 
   @override
   Widget build(BuildContext context) {
@@ -223,7 +227,21 @@ class _SignUp02State extends State<SignUp02> {
                           ),
                         ),
                         GestureDetector(
-                          onTap: () {
+                          onTap: () async {
+                            setState(() {
+                              _loading = true;
+                            });
+                            LocationData loc =
+                                await LocationFinder().getLocation();
+                            if (loc != null) {
+                              print(
+                                  'User Location: ${loc.latitude} + ${loc.longitude}');
+                            } else {
+                              loc = LocationData.fromMap({
+                                'latitude': 0.0,
+                                'longitude': 0.0,
+                              });
+                            }
                             if (_formKey.currentState.validate()) {
                               // If the form is valid, display a snackbar. In the real world,
                               // you'd often call a server or save the information in a database.
@@ -231,7 +249,8 @@ class _SignUp02State extends State<SignUp02> {
                               final String name = _nameController.value.text;
                               final String email = _emailController.value.text;
                               print('$name + $email');
-                              subscribeToEarlySignUp(name, email);
+                              subscribeToEarlySignUp(
+                                  name, email, loc.longitude, loc.latitude);
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(
                                   backgroundColor: green,
@@ -247,6 +266,9 @@ class _SignUp02State extends State<SignUp02> {
                               );
                               _formKey.currentState.reset();
                             }
+                            setState(() {
+                              _loading = false;
+                            });
                           },
                           child: Container(
                             padding: const EdgeInsets.symmetric(
@@ -257,14 +279,24 @@ class _SignUp02State extends State<SignUp02> {
                               gradient: redBlueGradient,
                               borderRadius: BorderRadius.circular(25.0),
                             ),
-                            child: Text(
-                              'Get Notified',
-                              style: GoogleFonts.poppins(
-                                fontSize: 16.0,
-                                fontWeight: FontWeight.w600,
-                                color: Colors.white,
-                              ),
-                            ),
+                            child: _loading
+                                ? SizedBox(
+                                    width: 20,
+                                    height: 20,
+                                    child: CircularProgressIndicator(
+                                      strokeWidth: 3,
+                                      valueColor:
+                                          AlwaysStoppedAnimation(Colors.white),
+                                    ),
+                                  )
+                                : Text(
+                                    'Get Notified',
+                                    style: GoogleFonts.poppins(
+                                      fontSize: 16.0,
+                                      fontWeight: FontWeight.w600,
+                                      color: Colors.white,
+                                    ),
+                                  ),
                           ),
                         ),
                         Padding(
