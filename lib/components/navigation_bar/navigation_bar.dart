@@ -22,6 +22,15 @@ class NavigationBar extends StatelessWidget {
         children: <Widget>[
           Row(
             children: <Widget>[
+              SizedBox(
+                height: 22,
+                width: 22,
+                child: Image.asset(
+                  'assets/logo_white.png',
+                  fit: BoxFit.contain,
+                ),
+              ),
+              const SizedBox(width: 4),
               GestureDetector(
                 onTap: () {
                   Navigator.pushNamed(context, '/');
@@ -43,8 +52,8 @@ class NavigationBar extends StatelessWidget {
                 child: Text(
                   isMobile(context) ? "Coming Soon" : "Coming in June 2021",
                   style: kNavBarTextStyle.copyWith(
-                    fontSize: isMobile(context) ? 12 : 18,
-                  ),
+                      fontSize: isMobile(context) ? 11 : 17,
+                      fontStyle: FontStyle.italic),
                 ),
               ),
             ],
@@ -52,6 +61,20 @@ class NavigationBar extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/features');
+                },
+                child: Padding(
+                  padding: EdgeInsets.only(left: kTextPaddingNavBar),
+                  child: Text(
+                    'FEATURES',
+                    style: kNavBarTextStyle.copyWith(
+                      fontSize: isMobile(context) ? 12 : 18,
+                    ),
+                  ),
+                ),
+              ),
               GestureDetector(
                 onTap: () {
                   Navigator.pushNamed(context, '/faq');

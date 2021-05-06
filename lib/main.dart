@@ -3,6 +3,7 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:necter_web/screens/contact_page/contact_page_router.dart';
 import 'package:necter_web/screens/faq_page/faq_page_router.dart';
 import 'package:necter_web/screens/home_page/home_page_router.dart';
+import 'package:necter_web/screens/how_it_works_page/howitworks_page_router.dart';
 import 'package:necter_web/screens/legal/privacy_policy.dart';
 import 'package:necter_web/screens/legal/terms_and_conditions.dart';
 
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
         '/privacy-policy': (context) =>
             PrivacyPolicy(docPath: 'assets/privacy_policy.pdf'),
         '/imprint': (context) => ContactPageRouter(),
+        '/features': (context) => HowItWorksPageRouter(),
       },
     );
   }
