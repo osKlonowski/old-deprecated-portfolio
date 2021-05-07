@@ -46,10 +46,10 @@ class SmallFrameFeatures extends StatelessWidget {
                   AutoSizeText(
                     title,
                     textAlign: TextAlign.start,
-                    minFontSize: 24,
-                    maxFontSize: 34,
+                    minFontSize: 22,
+                    maxFontSize: 32,
                     style: GoogleFonts.poppins(
-                      fontSize: 34,
+                      fontSize: 32,
                       fontWeight: FontWeight.w700,
                       color: Colors.white70,
                     ),
@@ -58,7 +58,7 @@ class SmallFrameFeatures extends StatelessWidget {
                     child: AutoSizeText(
                       description,
                       textAlign: TextAlign.left,
-                      minFontSize: 12,
+                      minFontSize: 10,
                       maxFontSize: 26,
                       stepGranularity: 1,
                       style: GoogleFonts.poppins(

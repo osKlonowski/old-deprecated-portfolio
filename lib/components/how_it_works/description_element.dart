@@ -33,7 +33,7 @@ class DescriptionElement extends StatelessWidget {
                 child: AutoSizeText(
                   description,
                   textAlign: textAlign,
-                  minFontSize: 18,
+                  minFontSize: 12,
                   maxFontSize: 26,
                   stepGranularity: 1,
                   style: GoogleFonts.poppins(

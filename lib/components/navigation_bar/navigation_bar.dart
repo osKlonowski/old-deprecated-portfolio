@@ -45,17 +45,19 @@ class NavigationBar extends StatelessWidget {
               SizedBox(
                 width: 12,
               ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(context, '/');
-                },
-                child: Text(
-                  isMobile(context) ? "Coming Soon" : "Coming in June 2021",
-                  style: kNavBarTextStyle.copyWith(
-                      fontSize: isMobile(context) ? 11 : 17,
-                      fontStyle: FontStyle.italic),
-                ),
-              ),
+              isMobile(context)
+                  ? GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/');
+                      },
+                      child: Text(
+                        "Coming in June 2021",
+                        style: kNavBarTextStyle.copyWith(
+                            fontSize: isMobile(context) ? 11 : 17,
+                            fontStyle: FontStyle.italic),
+                      ),
+                    )
+                  : SizedBox.shrink(),
             ],
           ),
           Row(
