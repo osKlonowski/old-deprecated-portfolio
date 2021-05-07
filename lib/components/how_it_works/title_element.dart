@@ -44,26 +44,11 @@ class TitleElement extends StatelessWidget {
                   Icon(
                     icon,
                     color: iconColor,
-                    size: 55,
+                    size: 60,
                   ),
                   SizedBox(height: 12),
-                  AutoSizeText(
+                  Text(
                     title,
-                    minFontSize: 24,
-                    maxFontSize: 48,
-                    presetFontSizes: [
-                      24,
-                      26,
-                      28,
-                      30,
-                      32,
-                      34,
-                      36,
-                      38,
-                      40,
-                      44,
-                      48,
-                    ],
                     textAlign: alignText,
                     style: GoogleFonts.poppins(
                       color: textColor,
