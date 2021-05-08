@@ -46,7 +46,8 @@ class NavigationBar extends StatelessWidget {
                 width: 12,
               ),
               isMobile(context)
-                  ? GestureDetector(
+                  ? SizedBox.shrink()
+                  : GestureDetector(
                       onTap: () {
                         Navigator.pushNamed(context, '/');
                       },
@@ -56,8 +57,7 @@ class NavigationBar extends StatelessWidget {
                             fontSize: isMobile(context) ? 11 : 17,
                             fontStyle: FontStyle.italic),
                       ),
-                    )
-                  : SizedBox.shrink(),
+                    ),
             ],
           ),
           Row(
