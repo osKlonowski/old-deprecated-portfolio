@@ -230,24 +230,6 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "location",
-      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/location-4.1.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "location_platform_interface",
-      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/location_platform_interface-2.1.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "location_web",
-      "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/location_web-3.0.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "matcher",
       "rootUri": "file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/matcher-0.12.10",
       "packageUri": "lib/",
@@ -434,7 +416,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2021-05-05T15:39:03.148436Z",
+  "generated": "2021-05-10T06:59:59.376928Z",
   "generator": "pub",
   "generatorVersion": "2.12.3"
 }

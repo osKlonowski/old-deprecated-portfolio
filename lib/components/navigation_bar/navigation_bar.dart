@@ -70,9 +70,9 @@ class NavigationBar extends StatelessWidget {
                 child: Padding(
                   padding: EdgeInsets.only(left: kTextPaddingNavBar),
                   child: Text(
-                    'FEATURES',
+                    'HOW IT WORKS',
                     style: kNavBarTextStyle.copyWith(
-                      fontSize: isMobile(context) ? 12 : 18,
+                      fontSize: isMobile(context) ? 11 : 18,
                     ),
                   ),
                 ),
@@ -86,7 +86,7 @@ class NavigationBar extends StatelessWidget {
                   child: Text(
                     'FAQ',
                     style: kNavBarTextStyle.copyWith(
-                      fontSize: isMobile(context) ? 12 : 18,
+                      fontSize: isMobile(context) ? 11 : 18,
                     ),
                   ),
                 ),
@@ -100,7 +100,7 @@ class NavigationBar extends StatelessWidget {
                   child: Text(
                     'CONTACT',
                     style: kNavBarTextStyle.copyWith(
-                      fontSize: isMobile(context) ? 12 : 18,
+                      fontSize: isMobile(context) ? 11 : 18,
                     ),
                   ),
                 ),
