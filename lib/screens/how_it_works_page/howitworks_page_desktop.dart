@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:necter_web/components/footer/footer.dart';
 import 'package:necter_web/components/navigation_bar/navigation_bar.dart';
+import 'package:necter_web/constants/app_colors.dart';
 
 class HowItWorksPageDesktop extends StatelessWidget {
   const HowItWorksPageDesktop(this.gridItems, this.smallFeatures);
@@ -16,6 +17,27 @@ class HowItWorksPageDesktop extends StatelessWidget {
         Expanded(
           child: CustomScrollView(
             slivers: [
+              SliverFillViewport(
+                viewportFraction: 1,
+                delegate: SliverChildBuilderDelegate(
+                  (BuildContext context, int index) {
+                    // Color c = index % 2 == 0 ? Colors.white : Colors.grey;
+                    return Container(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [
+                            red,
+                            blue,
+                          ],
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                        ),
+                      ),
+                    );
+                  },
+                  childCount: 1,
+                ),
+              ),
               SliverGrid(
                 gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
                   maxCrossAxisExtent: _size.width / 3,
