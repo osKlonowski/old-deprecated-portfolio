@@ -17,82 +17,71 @@ const Map<String, String> faqQuestionsStock = <String, String>{
       'With necter you regain control of your life. No annoying algorithms, no personalized advertising or stereotypes that you have to comply with. Necter is freedom. Freedom to do what you feel like doing.\nAre you looking for your soul mate? Are you new in town and looking for people who are completely on your wavelength?\nYou are bored? Find new walking buddies and stud partners. (Attention: Keep the minimum distance and the applicable rules. We want to get the virus under control as quickly as possible so that we no longer live like pensioners and can finally go to the bars and clubs of our beautiful port city again)\nActually, you want to get to know someone, but never dare to walk over? With necter you can see who is open to spontaneous conversations in your environment. So just check out necter, see who is there and go over.',
 };
 
-List<Widget> generateItems() {
-  return List<Widget>.generate(faqQuestionsStock.length, (int index) {
-    return FAQQuestionViewBox(
+List<FAQItem> generateItems() {
+  return List<FAQItem>.generate(faqQuestionsStock.length, (int index) {
+    return FAQItem(
       question: faqQuestionsStock.keys.elementAt(index),
       answer: faqQuestionsStock.values.elementAt(index),
     );
   });
 }
 
-class FAQPageDesktop extends StatefulWidget {
+class FAQPageMobile extends StatefulWidget {
   @override
-  _FAQPageDesktopState createState() => _FAQPageDesktopState();
+  _FAQPageMobileState createState() => _FAQPageMobileState();
 }
 
-class _FAQPageDesktopState extends State<FAQPageDesktop> {
-  final List<Widget> _data = generateItems();
+class _FAQPageMobileState extends State<FAQPageMobile> {
+  final List<FAQItem> _data = generateItems();
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.grey[100],
-      child: Column(
-        children: <Widget>[
-          NavigationBar(),
-          Expanded(
-            child: SingleChildScrollView(
-              child: Column(
-                children: <Widget>[
-                  ..._data,
-                  Footer(),
-                ],
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class FAQQuestionViewBox extends StatelessWidget {
-  const FAQQuestionViewBox({this.question, this.answer});
-
-  final String question;
-  final String answer;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(14.0),
-      child: Container(
-        width: MediaQuery.of(context).size.width * 0.75,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15),
-          color: Colors.white,
-        ),
-        padding: const EdgeInsets.all(16),
-        child: RichText(
-          text: TextSpan(
-            text: '$question\n',
-            style: GoogleFonts.poppins(
-              fontSize: 16.0,
-              fontWeight: FontWeight.w700,
-            ),
-            children: [
-              TextSpan(
-                text: answer,
-                style: GoogleFonts.poppins(
-                  fontSize: 14.0,
-                  fontWeight: FontWeight.w500,
+    return Column(
+      children: <Widget>[
+        NavigationBar(),
+        Expanded(
+          child: SingleChildScrollView(
+            child: Column(
+              children: <Widget>[
+                ExpansionPanelList(
+                  expansionCallback: (int index, bool isExpanded) {
+                    setState(() {
+                      _data[index].isExpanded = !isExpanded;
+                    });
+                  },
+                  children: _data.map<ExpansionPanel>((FAQItem item) {
+                    return ExpansionPanel(
+                      headerBuilder: (BuildContext context, bool isExpanded) {
+                        return ListTile(
+                          title: Text(
+                            item.question,
+                            style: GoogleFonts.poppins(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 15.0,
+                            ),
+                          ),
+                        );
+                      },
+                      body: ListTile(
+                        contentPadding: EdgeInsets.all(12.0),
+                        title: Text(
+                          item.answer,
+                          style: GoogleFonts.poppins(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 17.0,
+                          ),
+                        ),
+                      ),
+                      isExpanded: item.isExpanded,
+                    );
+                  }).toList(),
                 ),
-              ),
-            ],
+                Footer(),
+              ],
+            ),
           ),
         ),
-      ),
+      ],
     );
   }
 }
