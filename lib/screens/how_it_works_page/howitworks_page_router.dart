@@ -118,7 +118,7 @@ class HowItWorksPageRouter extends StatelessWidget {
       body: Responsive(
         desktop: HowItWorksPageDesktop(_gridElements, _smallFeatures),
         tablet: HowItWorksPageDesktop(_gridElements, _smallFeatures),
-        mobile: HowItWorksPageMobile(_mobileGridElements),
+        mobile: HowItWorksPageMobile(_smallFeatures),
       ),
     );
   }
