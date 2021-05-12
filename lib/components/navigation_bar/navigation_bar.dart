@@ -70,7 +70,7 @@ class NavigationBar extends StatelessWidget {
                 child: Padding(
                   padding: EdgeInsets.only(left: kTextPaddingNavBar),
                   child: Text(
-                    'HOW IT WORKS',
+                    'USE-CASES',
                     style: kNavBarTextStyle.copyWith(
                       fontSize: isMobile(context) ? 11 : 18,
                     ),
