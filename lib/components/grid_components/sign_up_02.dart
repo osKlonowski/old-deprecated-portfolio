@@ -237,7 +237,7 @@ class _SignUp02State extends State<SignUp02> {
                               final String email = _emailController.value.text;
                               print('$name + $email');
                               subscribeToEarlySignUp(name, email);
-                              ScaffoldMessenger.of(context).showSnackBar(
+                              Scaffold.of(context).showSnackBar(
                                 SnackBar(
                                   backgroundColor: green,
                                   content: Text(

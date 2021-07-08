@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:necter_web/constants/app_colors.dart';
 import 'package:necter_web/constants/text_styles.dart';
 import 'package:necter_web/utils/global_func.dart';
@@ -11,7 +10,7 @@ class NavigationBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        gradient: verticalRedNavBarGradient,
+        color: periwinkle,
       ),
       padding: EdgeInsets.symmetric(
         horizontal: isMobile(context) ? 20 : 45,
@@ -21,16 +20,9 @@ class NavigationBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              SizedBox(
-                height: 22,
-                width: 22,
-                child: Image.asset(
-                  'assets/logo_white.png',
-                  fit: BoxFit.contain,
-                ),
-              ),
-              const SizedBox(width: 4),
               GestureDetector(
                 onTap: () {
                   Navigator.pushNamed(context, '/');
@@ -43,7 +35,7 @@ class NavigationBar extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: 12,
+                width: 18,
               ),
               isMobile(context)
                   ? SizedBox.shrink()
@@ -52,31 +44,18 @@ class NavigationBar extends StatelessWidget {
                         Navigator.pushNamed(context, '/');
                       },
                       child: Text(
-                        "Coming in June 2021",
+                        "Coming in July 2021",
                         style: kNavBarTextStyle.copyWith(
-                            fontSize: isMobile(context) ? 11 : 17,
-                            fontStyle: FontStyle.italic),
+                          fontSize: isMobile(context) ? 11 : 17,
+                        ),
                       ),
                     ),
             ],
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(context, '/features');
-                },
-                child: Padding(
-                  padding: EdgeInsets.only(left: kTextPaddingNavBar),
-                  child: Text(
-                    'USE-CASES',
-                    style: kNavBarTextStyle.copyWith(
-                      fontSize: isMobile(context) ? 11 : 18,
-                    ),
-                  ),
-                ),
-              ),
               GestureDetector(
                 onTap: () {
                   Navigator.pushNamed(context, '/faq');
@@ -105,20 +84,6 @@ class NavigationBar extends StatelessWidget {
                   ),
                 ),
               ),
-              // GestureDetector(
-              //   onTap: () {
-              //     EasyLoading.showInfo('Available in June 2021');
-              //   },
-              //   child: Padding(
-              //     padding: EdgeInsets.only(left: kTextPaddingNavBar),
-              //     child: Text(
-              //       'DOWNLOAD',
-              //       style: kNavBarTextStyle.copyWith(
-              //         fontSize: isMobile(context) ? 14 : 18,
-              //       ),
-              //     ),
-              //   ),
-              // ),
             ],
           )
         ],

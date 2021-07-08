@@ -13,7 +13,7 @@ class MockUp03 extends StatelessWidget {
         builder: (BuildContext ctx, BoxConstraints constraints) {
           return Container(
             padding: gridItemMainPadding,
-            color: blue,
+            color: periwinkle,
             child: Center(
               child: FractionallySizedBox(
                 widthFactor: .5,

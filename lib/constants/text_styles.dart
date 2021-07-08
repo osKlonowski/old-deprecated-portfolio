@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 TextStyle kNavBarTextStyle = GoogleFonts.poppins(
   fontSize: 18,
   fontWeight: FontWeight.bold,
-  color: Colors.white,
+  color: Colors.black,
 );
 
 TextStyle kFooterLinkTextStyle = GoogleFonts.poppins(

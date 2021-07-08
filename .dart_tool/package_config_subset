@@ -8,8 +8,8 @@ file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.d
 file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/archive-3.1.2/lib/
 async
 2.12
-file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.5.0/
-file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.5.0/lib/
+file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.6.1/
+file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.6.1/lib/
 auto_size_text
 2.12
 file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/auto_size_text-3.0.0-nullsafety.0/
@@ -204,8 +204,8 @@ file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.d
 file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/responsive_builder-0.1.9/lib/
 source_span
 2.12
-file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/source_span-1.8.0/
-file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/source_span-1.8.0/lib/
+file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/source_span-1.8.1/
+file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/source_span-1.8.1/lib/
 stack_trace
 2.12
 file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/stack_trace-1.10.0/
@@ -228,8 +228,8 @@ file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.d
 file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/term_glyph-1.2.0/lib/
 test_api
 2.12
-file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/test_api-0.2.19/
-file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/test_api-0.2.19/lib/
+file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/test_api-0.3.0/
+file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/test_api-0.3.0/lib/
 transparent_image
 1.24
 file:///Users/oskarklonowski/Documents/dev_other/flutter/.pub-cache/hosted/pub.dartlang.org/transparent_image-1.0.0/

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:necter_web/components/footer/footer.dart';
 import 'package:necter_web/components/navigation_bar/navigation_bar.dart';
-import 'package:necter_web/models/classes/faq_item.dart';
 
 const Map<String, String> faqQuestionsStock = <String, String>{
   'Why Necter?':
