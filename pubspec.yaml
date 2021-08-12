@@ -59,14 +59,17 @@ flutter:
     - assets/apple_logo.png
     - assets/mock-up.png
     - assets/logo_white.png
-    - assets/privacy_policy.pdf
-    - assets/terms_and_conditions.pdf
+    - assets/en_privacy_policy.pdf
+    - assets/en_terms_and_conditions.pdf
+    - assets/de_privacy_policy.pdf
+    - assets/de_terms_and_conditions.pdf
     - assets/animations/be_there.gif
     - assets/animations/wing_app.gif
     - assets/animations/old_school.png
     - assets/animations/say_hi.png
     - assets/animations/wing_app_neon.gif
     - assets/animations/wing_app_neon2.gif
+    - assets/home_screen_mockup.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

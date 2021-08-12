@@ -7,6 +7,7 @@ import 'package:flutter/rendering.dart';
 
 //PERIWINKLE
 Color periwinkle = const Color(0xFFB4BCED);
+Color thickPeriwinkle = const Color(0xFF9CA7EC);
 
 //AMARANTH -> Main Red Background Color
 Color red = amaranth; //Ref for general use

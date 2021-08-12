@@ -44,7 +44,7 @@ class NavigationBar extends StatelessWidget {
                         Navigator.pushNamed(context, '/');
                       },
                       child: Text(
-                        "Coming in July 2021",
+                        "Coming in August 2021",
                         style: kNavBarTextStyle.copyWith(
                           fontSize: isMobile(context) ? 11 : 17,
                         ),

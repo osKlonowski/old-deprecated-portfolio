@@ -29,10 +29,14 @@ class MyApp extends StatelessWidget {
         '/': (context) => HomePageRouter(),
         '/contact': (context) => ContactPageRouter(),
         '/faq': (context) => FAQPageRouter(),
-        '/terms-and-conditions': (context) =>
-            TermsAndConditions(docPath: 'assets/terms_and_conditions.pdf'),
-        '/privacy-policy': (context) =>
-            PrivacyPolicy(docPath: 'assets/privacy_policy.pdf'),
+        '/en-terms-and-conditions': (context) =>
+            TermsAndConditions(docPath: 'assets/en_terms_and_conditions.pdf'),
+        '/de-terms-and-conditions': (context) =>
+            TermsAndConditions(docPath: 'assets/de_terms_and_conditions.pdf'),
+        '/en-privacy-policy': (context) =>
+            PrivacyPolicy(docPath: 'assets/en_privacy_policy.pdf'),
+        '/de-privacy-policy': (context) =>
+            PrivacyPolicy(docPath: 'assets/de_privacy_policy.pdf'),
         '/imprint': (context) => ContactPageRouter(),
         '/features': (context) => HowItWorksPageRouter(),
       },

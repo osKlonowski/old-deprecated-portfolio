@@ -67,19 +67,37 @@ class Footer extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, '/privacy-policy');
+                        Navigator.pushNamed(context, '/en-privacy-policy');
                       },
                       child: Text(
-                        'Privacy Policy',
+                        'EN - Privacy Policy',
                         style: kFooterLinkTextStyle,
                       ),
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, '/terms-and-conditions');
+                        Navigator.pushNamed(context, '/de-privacy-policy');
                       },
                       child: Text(
-                        'Terms of Service',
+                        'DE - Privacy Policy',
+                        style: kFooterLinkTextStyle,
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/en-terms-and-conditions');
+                      },
+                      child: Text(
+                        'EN - Terms of Service',
+                        style: kFooterLinkTextStyle,
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/de-terms-and-conditions');
+                      },
+                      child: Text(
+                        'DE - Terms of Service',
                         style: kFooterLinkTextStyle,
                       ),
                     ),

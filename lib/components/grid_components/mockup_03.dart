@@ -13,13 +13,13 @@ class MockUp03 extends StatelessWidget {
         builder: (BuildContext ctx, BoxConstraints constraints) {
           return Container(
             padding: gridItemMainPadding,
-            color: periwinkle,
+            color: thickPeriwinkle,
             child: Center(
               child: FractionallySizedBox(
                 widthFactor: .5,
                 alignment: Alignment.center,
                 child: Image.asset(
-                  'assets/mock-up.png',
+                  'assets/home_screen_mockup.png',
                   fit: BoxFit.fitHeight,
                 ),
               ),
