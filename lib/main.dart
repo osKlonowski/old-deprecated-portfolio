@@ -31,6 +31,10 @@ class MyApp extends StatelessWidget {
         '/faq': (context) => FAQPageRouter(),
         '/en-terms-and-conditions': (context) =>
             TermsAndConditions(docPath: 'assets/en_terms_and_conditions.pdf'),
+        '/terms-and-conditions': (context) =>
+            TermsAndConditions(docPath: 'assets/en_terms_and_conditions.pdf'),
+        '/privacy-policy': (context) =>
+            PrivacyPolicy(docPath: 'assets/en_privacy_policy.pdf'),
         '/de-terms-and-conditions': (context) =>
             TermsAndConditions(docPath: 'assets/de_terms_and_conditions.pdf'),
         '/en-privacy-policy': (context) =>
