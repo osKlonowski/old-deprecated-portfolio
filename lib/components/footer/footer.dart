@@ -41,10 +41,6 @@ class Footer extends StatelessWidget {
                         style: kFooterLinkTextStyle,
                       ),
                     ),
-                    // Text(
-                    //   'Guidelines',
-                    //   style: kFooterLinkTextStyle,
-                    // ),
                   ],
                 ),
                 SizedBox(width: 14),
@@ -85,7 +81,8 @@ class Footer extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, '/en-terms-and-conditions');
+                        Navigator.pushNamed(
+                            context, '/en-terms-and-conditions');
                       },
                       child: Text(
                         'EN - Terms of Service',
@@ -94,7 +91,8 @@ class Footer extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, '/de-terms-and-conditions');
+                        Navigator.pushNamed(
+                            context, '/de-terms-and-conditions');
                       },
                       child: Text(
                         'DE - Terms of Service',
@@ -162,7 +160,6 @@ class Footer extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        //TODO: FIX-LINK URL???
                         html.window.open(
                           'https://www.facebook.com/Necter-110394790575070',
                           'Necter-Facebook',

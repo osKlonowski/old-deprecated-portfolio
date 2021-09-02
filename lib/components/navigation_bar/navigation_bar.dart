@@ -58,6 +58,20 @@ class NavigationBar extends StatelessWidget {
             children: <Widget>[
               GestureDetector(
                 onTap: () {
+                  Navigator.pushNamed(context, '/download');
+                },
+                child: Padding(
+                  padding: EdgeInsets.only(left: kTextPaddingNavBar),
+                  child: Text(
+                    'DOWNLOAD',
+                    style: kNavBarTextStyle.copyWith(
+                      fontSize: isMobile(context) ? 11 : 18,
+                    ),
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
                   Navigator.pushNamed(context, '/faq');
                 },
                 child: Padding(

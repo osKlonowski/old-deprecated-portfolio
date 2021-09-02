@@ -11,15 +11,15 @@ class OpenBeta02 extends StatelessWidget {
   double getFontSize(double widthOfScreen) {
     if (widthOfScreen < 650) {
       //MOBILE
-      return 18;
+      return 20;
     } else if (widthOfScreen < 1100 && widthOfScreen >= 650) {
       //TABLET
-      return 14;
+      return 16;
     } else if (widthOfScreen >= 1100) {
       //DESKTOP
-      return 18;
+      return 20;
     } else {
-      return 16;
+      return 18;
     }
   }
 
@@ -51,7 +51,8 @@ class OpenBeta02 extends StatelessWidget {
               child: GestureDetector(
                 onTap: () {
                   html.window.open(
-                      'https://testflight.apple.com/join/K3MKZ7rC', 'new tab');
+                      'https://apps.apple.com/us/app/necter-offline-dating/id1546097364',
+                      'new tab');
                 },
                 child: SizedBox(
                   width: isMobile(context)
@@ -84,8 +85,8 @@ class OpenBeta02 extends StatelessWidget {
                                 child: Image.asset(
                                   'assets/apple_logo.png',
                                   fit: BoxFit.contain,
-                                  width: isMobile(context) ? 25 : 40,
-                                  height: isMobile(context) ? 25 : 40,
+                                  width: isMobile(context) ? 25 : 28,
+                                  height: isMobile(context) ? 25 : 28,
                                 ),
                               )
                             : SizedBox.shrink(),
@@ -93,7 +94,7 @@ class OpenBeta02 extends StatelessWidget {
                             ? SizedBox(width: 12)
                             : SizedBox.shrink(),
                         Text(
-                          'Download BETA',
+                          'Download',
                           style: GoogleFonts.poppins(
                             fontSize:
                                 getFontSize(MediaQuery.of(context).size.width),
