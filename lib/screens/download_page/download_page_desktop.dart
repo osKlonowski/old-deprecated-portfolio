@@ -16,6 +16,8 @@ class DownloadPageDesktop extends StatefulWidget {
 }
 
 class _DownloadPageDesktopState extends State<DownloadPageDesktop> {
+  String _extraScript = '';
+
   @override
   void initState() {
     super.initState();
@@ -25,16 +27,25 @@ class _DownloadPageDesktopState extends State<DownloadPageDesktop> {
   void _redirectToDownload() {
     if (kIsWeb) {
       print('on the web');
-    } else {
-      if (Platform.isIOS) {
+      if (defaultTargetPlatform == TargetPlatform.iOS) {
         html.window.open(
             'https://apps.apple.com/us/app/necter-offline-dating/id1546097364',
-            'Necter');
-      } else if (Platform.isAndroid) {
-        print('Open Android Download Page');
+            'Necter - IOS');
+      } else if (defaultTargetPlatform == TargetPlatform.android) {
+        html.window.open(
+            'https://play.google.com/store/apps/details?id=io.tuned.bkt.necter',
+            'Necter - Android');
       } else {
-        print('Do nothing, show empty page');
+        print('Please view this page on a mobile device!');
+        setState(() {
+          _extraScript = 'Please view this page on a mobile device.';
+        });
       }
+    } else {
+      print('Do nothing, show empty page');
+      setState(() {
+        _extraScript = 'Please view this page on a mobile device.';
+      });
     }
   }
 
@@ -70,20 +81,23 @@ class _DownloadPageDesktopState extends State<DownloadPageDesktop> {
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
-                                    Text(
-                                      'Necter - Offline Dating',
-                                      textAlign: TextAlign.center,
-                                      style: GoogleFonts.poppins(
-                                        fontSize: 30.0,
-                                        fontWeight: FontWeight.w700,
-                                        color: Colors.white,
+                                    Padding(
+                                      padding: const EdgeInsets.all(18.0),
+                                      child: Text(
+                                        'Necter - Offline Dating',
+                                        textAlign: TextAlign.center,
+                                        style: GoogleFonts.poppins(
+                                          fontSize: 30.0,
+                                          fontWeight: FontWeight.w700,
+                                          color: Colors.white,
+                                        ),
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsets.all(14.0),
+                                      padding: const EdgeInsets.all(18.0),
                                       child: ClipRRect(
                                         borderRadius:
-                                            BorderRadius.circular(15.0),
+                                            BorderRadius.circular(18.0),
                                         child: SizedBox(
                                           width: 200,
                                           height: 200,
@@ -94,31 +108,51 @@ class _DownloadPageDesktopState extends State<DownloadPageDesktop> {
                                         ),
                                       ),
                                     ),
-                                    Container(
-                                      padding: const EdgeInsets.symmetric(
-                                        horizontal: 14,
-                                        vertical: 10,
-                                      ),
-                                      decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(12.0),
-                                          color: Colors.black,
-                                          border: Border.all(
-                                            color: Colors.white,
-                                            width: 4.0,
-                                          )),
-                                      child: Center(
-                                        child: Text(
-                                          'DOWNLOAD',
-                                          textAlign: TextAlign.center,
-                                          style: GoogleFonts.poppins(
-                                            fontSize: 22.0,
-                                            fontWeight: FontWeight.w600,
-                                            color: Colors.white,
+                                    Padding(
+                                      padding: const EdgeInsets.all(18.0),
+                                      child: GestureDetector(
+                                        onTap: _redirectToDownload,
+                                        child: Container(
+                                          padding: const EdgeInsets.symmetric(
+                                            horizontal: 14,
+                                            vertical: 10,
+                                          ),
+                                          decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(12.0),
+                                              color: Colors.black,
+                                              border: Border.all(
+                                                color: Colors.white,
+                                                width: 4.0,
+                                              )),
+                                          child: Center(
+                                            child: Text(
+                                              'DOWNLOAD',
+                                              textAlign: TextAlign.center,
+                                              style: GoogleFonts.poppins(
+                                                fontSize: 22.0,
+                                                fontWeight: FontWeight.w600,
+                                                color: Colors.white,
+                                              ),
+                                            ),
                                           ),
                                         ),
                                       ),
                                     ),
+                                    _extraScript.isNotEmpty
+                                        ? Padding(
+                                            padding: const EdgeInsets.all(12.0),
+                                            child: Text(
+                                              _extraScript,
+                                              textAlign: TextAlign.center,
+                                              style: GoogleFonts.poppins(
+                                                fontSize: 20.0,
+                                                fontWeight: FontWeight.w500,
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                          )
+                                        : SizedBox.shrink(),
                                   ],
                                 ),
                               ),
