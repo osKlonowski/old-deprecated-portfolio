@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:necter_web/constants/app_colors.dart';
@@ -38,6 +39,28 @@ class OpenBeta02 extends StatelessWidget {
     }
   }
 
+  void _redirectToDownload() {
+    if (kIsWeb) {
+      print('on the web');
+      if (defaultTargetPlatform == TargetPlatform.iOS) {
+        html.window.open(
+            'https://apps.apple.com/us/app/necter-offline-dating/id1546097364',
+            'Necter - IOS');
+      } else if (defaultTargetPlatform == TargetPlatform.android) {
+        html.window.open(
+            'https://play.google.com/store/apps/details?id=io.tuned.bkt.necter',
+            'Necter - Android');
+      } else {
+        print('Please view this page on a mobile device!');
+        html.window.open(
+            'https://apps.apple.com/us/app/necter-offline-dating/id1546097364',
+            'Necter - IOS');
+      }
+    } else {
+      print('Do nothing, show empty page');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
@@ -49,11 +72,7 @@ class OpenBeta02 extends StatelessWidget {
             padding: gridItemMainPadding,
             child: Center(
               child: GestureDetector(
-                onTap: () {
-                  html.window.open(
-                      'https://apps.apple.com/us/app/necter-offline-dating/id1546097364',
-                      'new tab');
-                },
+                onTap: _redirectToDownload,
                 child: SizedBox(
                   width: isMobile(context)
                       ? constraints.maxWidth / 1.45
@@ -75,34 +94,15 @@ class OpenBeta02 extends StatelessWidget {
                         ),
                       ],
                     ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: <Widget>[
-                        //LOGO APPLE
-                        shouldShowLogo(MediaQuery.of(context).size.width)
-                            ? Flexible(
-                                child: Image.asset(
-                                  'assets/apple_logo.png',
-                                  fit: BoxFit.contain,
-                                  width: isMobile(context) ? 25 : 28,
-                                  height: isMobile(context) ? 25 : 28,
-                                ),
-                              )
-                            : SizedBox.shrink(),
-                        shouldShowLogo(MediaQuery.of(context).size.width)
-                            ? SizedBox(width: 12)
-                            : SizedBox.shrink(),
-                        Text(
-                          'Download',
-                          style: GoogleFonts.poppins(
-                            fontSize:
-                                getFontSize(MediaQuery.of(context).size.width),
-                            fontWeight: FontWeight.w700,
-                            color: Colors.black,
-                          ),
-                        ),
-                      ],
+                    child: Text(
+                      'Download',
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.poppins(
+                        fontSize:
+                            getFontSize(MediaQuery.of(context).size.width),
+                        fontWeight: FontWeight.w700,
+                        color: Colors.black,
+                      ),
                     ),
                   ),
                 ),
