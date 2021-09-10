@@ -117,26 +117,72 @@ class _DownloadPageDesktopState extends State<DownloadPageDesktop> {
                                             horizontal: 14,
                                             vertical: 10,
                                           ),
+                                          margin: const EdgeInsets.only(
+                                            left: 14.0,
+                                            right: 14.0,
+                                          ),
                                           decoration: BoxDecoration(
                                               borderRadius:
-                                                  BorderRadius.circular(12.0),
-                                              color: Colors.black,
+                                                  BorderRadius.circular(20.0),
+                                              color: Colors.white,
                                               border: Border.all(
-                                                color: Colors.white,
+                                                color: periwinkle,
                                                 width: 4.0,
                                               )),
                                           child: Center(
                                             child: Text(
-                                              'DOWNLOAD',
+                                              'Download',
                                               textAlign: TextAlign.center,
                                               style: GoogleFonts.poppins(
                                                 fontSize: 22.0,
-                                                fontWeight: FontWeight.w600,
-                                                color: Colors.white,
+                                                fontWeight: FontWeight.w700,
+                                                color: Colors.black,
                                               ),
                                             ),
                                           ),
                                         ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(14.0),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: <Widget>[
+                                          Expanded(
+                                            flex: 4,
+                                            child: GestureDetector(
+                                              onTap: () {
+                                                html.window.open(
+                                                    'https://apps.apple.com/us/app/necter-offline-dating/id1546097364',
+                                                    'Necter - IOS');
+                                              },
+                                              child: Image.asset(
+                                                'assets/ios_badge.png',
+                                                fit: BoxFit.contain,
+                                              ),
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            width: 20,
+                                          ),
+                                          Expanded(
+                                            flex: 4,
+                                            child: GestureDetector(
+                                              onTap: () {
+                                                html.window.open(
+                                                    'https://play.google.com/store/apps/details?id=io.tuned.bkt.necter',
+                                                    'Necter - Android');
+                                              },
+                                              child: Image.asset(
+                                                'assets/android_badge.png',
+                                                fit: BoxFit.contain,
+                                              ),
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                     ),
                                     _extraScript.isNotEmpty
