@@ -36,7 +36,7 @@ class HomePageRouter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: red,
+      backgroundColor: periwinkle,
       body: Responsive(
         desktop: HomePageDesktop(_gridElements),
         tablet: HomePageDesktop(_mobileListElements),

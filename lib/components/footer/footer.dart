@@ -14,7 +14,7 @@ class Footer extends StatelessWidget {
     // Size _size = MediaQuery.of(context).size;
     return Container(
       padding: const EdgeInsets.all(26.0),
-      color: red,
+      color: thickPeriwinkle,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [

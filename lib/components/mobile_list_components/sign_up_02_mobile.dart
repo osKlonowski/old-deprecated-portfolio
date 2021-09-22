@@ -30,7 +30,7 @@ class _SignUp02MobileState extends State<SignUp02Mobile> {
         builder: (BuildContext ctx, BoxConstraints constraints) {
           return Container(
             padding: gridItemMainPadding,
-            color: red,
+            color: thickPeriwinkle,
             child: Center(
               child: Container(
                 padding: const EdgeInsets.all(12.0),

@@ -10,8 +10,8 @@ Color periwinkle = const Color(0xFFB4BCED);
 Color thickPeriwinkle = const Color(0xFF9CA7EC);
 
 //AMARANTH -> Main Red Background Color
-Color red = amaranth; //Ref for general use
-Color amaranth = const Color(0xFFE5044B); //AMARANTH
+// Color red = amaranth; //Ref for general use
+// Color amaranth = const Color(0xFFE5044B); //AMARANTH
 
 //CARIBBEAN GREEN -> Main Green Secondary Color
 Color green = caribbeanGreen; //Ref for general use

@@ -29,7 +29,7 @@ class _SignUp02State extends State<SignUp02> {
         builder: (BuildContext ctx, BoxConstraints constraints) {
           return Container(
             padding: gridItemMainPadding,
-            color: red,
+            color: thickPeriwinkle,
             child: Center(
               child: SizedBox(
                 width: constraints.maxWidth * 0.65,

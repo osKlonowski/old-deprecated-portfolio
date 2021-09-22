@@ -10,7 +10,7 @@ class ContactPageRouter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: red,
+      backgroundColor: periwinkle,
       body: Responsive(
         desktop: ContactPageDesktop(),
         tablet: ContactPageDesktop(),

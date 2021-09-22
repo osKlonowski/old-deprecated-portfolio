@@ -31,7 +31,7 @@ List<Widget> _smallFeatures = <Widget>[
     title: 'COVID-19',
     description:
         'People often wear masks and spontaneous interaction is  discouraged, yet Necter lets you see behind the mask and makes starting a conversation safe and easy.',
-    backgroundColor: red,
+    backgroundColor: thickPeriwinkle,
     iconColor: Colors.white,
     textColor: Colors.white,
     icon: FontAwesomeIcons.theaterMasks,
@@ -42,7 +42,7 @@ List<Widget> _gridElements = <Widget>[
   TitleElement(
     title: 'Process',
     icon: FontAwesomeIcons.watchmanMonitoring,
-    iconColor: red,
+    iconColor: thickPeriwinkle,
     backgroundColor: Colors.white,
     textColor: Colors.black,
     alignBox: CrossAxisAlignment.start,
@@ -77,7 +77,7 @@ List<Widget> _mobileGridElements = <Widget>[
   TitleElement(
     title: 'Process',
     icon: FontAwesomeIcons.watchmanMonitoring,
-    iconColor: red,
+    iconColor: thickPeriwinkle,
     backgroundColor: Colors.white,
     textColor: Colors.black,
     alignBox: CrossAxisAlignment.start,
@@ -114,7 +114,7 @@ class HowItWorksPageRouter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: red,
+      backgroundColor: periwinkle,
       body: Responsive(
         desktop: HowItWorksPageDesktop(_gridElements, _smallFeatures),
         tablet: HowItWorksPageDesktop(_gridElements, _smallFeatures),
