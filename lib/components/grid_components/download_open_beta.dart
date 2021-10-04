@@ -76,13 +76,17 @@ class OpenBeta02 extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   SizedBox(
-                    width: constraints.maxWidth / 3,
-                    height: constraints.maxHeight / 3,
-                    child: Image.asset(
-                      'assets/logo_white.png',
-                      fit: BoxFit.contain,
+                    width: constraints.maxWidth / 4,
+                    height: constraints.maxHeight / 4,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(15.0),
+                      child: Image.asset(
+                        'assets/app_icon.png',
+                        fit: BoxFit.contain,
+                      ),
                     ),
                   ),
+                  SizedBox(height: 15),
                   GestureDetector(
                     onTap: _redirectToDownload,
                     child: SizedBox(
